@@ -1,5 +1,7 @@
 package com.grandmen123.xtutorial;
 
+import com.grandmen123.xtutorial.items.ModItemGroup;
+import com.grandmen123.xtutorial.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,5 +13,8 @@ public class XTutorial implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Hello Fabric world!");
+        ModItemGroup.registerItemGroups();
+
+        ModItems.registerModItems();
     }
 }
