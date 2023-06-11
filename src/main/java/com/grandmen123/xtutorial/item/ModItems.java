@@ -1,4 +1,4 @@
-package com.grandmen123.xtutorial.items;
+package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

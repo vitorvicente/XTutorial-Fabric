@@ -1,6 +1,9 @@
 {
   "item.xtutorial.citrine": "Citrine",
   "item.xtutorial.raw_citrine": "Raw Citrine",
+  "block.xtutorial.citrine_block": "Citrine Block",
+  "block.xtutorial.citrine_ore": "Citrine Ore",
+  "block.xtutorial.deepslate_citrine_ore": "Deepslate Citrine Ore",
 
   "itemgroup.citrine": "Citrine Item Group"
 }
