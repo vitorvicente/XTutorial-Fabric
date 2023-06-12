@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "xtutorial:block/red_maple_planks"
+  }
+}

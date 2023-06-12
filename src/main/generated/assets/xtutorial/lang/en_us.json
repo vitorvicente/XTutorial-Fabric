@@ -2,7 +2,14 @@
   "block.xtutorial.citrine_block": "Citrine Block",
   "block.xtutorial.citrine_ore": "Citrine Ore",
   "block.xtutorial.deepslate_citrine_ore": "Deepslate Citrine Ore",
+  "block.xtutorial.red_maple_leaves": "Red Maple Leaves",
+  "block.xtutorial.red_maple_log": "Red Maple Log",
+  "block.xtutorial.red_maple_planks": "Red Maple Planks",
+  "block.xtutorial.red_maple_sapling": "Red Maple Sapling",
+  "block.xtutorial.red_maple_wood": "Red Maple Wood",
+  "block.xtutorial.stripped_red_maple_log": "Stripped Red Maple Log",
+  "block.xtutorial.stripped_red_maple_wood": "Stripped Red Maple Wood",
   "item.xtutorial.citrine": "Citrine",
   "item.xtutorial.raw_citrine": "Raw Citrine",
-  "itemgroup.citrine": "Citrine Item Group"
+  "itemgroup.xtutorial": "XTutorial"
 }

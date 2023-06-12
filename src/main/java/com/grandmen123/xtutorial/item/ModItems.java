@@ -19,8 +19,8 @@ public class ModItems {
     }
 
     public static void addItemsToItemGroup() {
-        addToItemGroup(ModItemGroup.CITRINE, CITRINE);
-        addToItemGroup(ModItemGroup.CITRINE, RAW_CITRINE);
+        addToItemGroup(ModItemGroup.XTUTORIAL_CREATIVE_TAB, CITRINE);
+        addToItemGroup(ModItemGroup.XTUTORIAL_CREATIVE_TAB, RAW_CITRINE);
     }
 
     private static void addToItemGroup(ItemGroup itemGroup, Item item) {

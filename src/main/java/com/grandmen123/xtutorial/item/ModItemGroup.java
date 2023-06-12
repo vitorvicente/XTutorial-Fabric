@@ -8,11 +8,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-    public static ItemGroup CITRINE;
+    public static ItemGroup XTUTORIAL_CREATIVE_TAB;
 
     public static void registerItemGroups() {
-        CITRINE = FabricItemGroup.builder(new Identifier(XTutorial.MOD_ID, "citrine"))
-                                 .displayName(Text.translatable("itemgroup.citrine"))
-                                 .icon(() -> new ItemStack(ModItems.CITRINE)).build();
+        XTUTORIAL_CREATIVE_TAB = FabricItemGroup.builder(new Identifier(XTutorial.MOD_ID, "xtutorial"))
+                                                .displayName(Text.translatable("itemgroup.xtutorial"))
+                                                .icon(() -> new ItemStack(ModItems.CITRINE)).build();
     }
 }

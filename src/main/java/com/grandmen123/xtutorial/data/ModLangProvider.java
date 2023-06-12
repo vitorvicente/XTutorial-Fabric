@@ -13,11 +13,20 @@ public class ModLangProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
+        translationBuilder.add(ModItemGroup.XTUTORIAL_CREATIVE_TAB, "XTutorial");
+
         translationBuilder.add(ModItems.CITRINE, "Citrine");
         translationBuilder.add(ModItems.RAW_CITRINE, "Raw Citrine");
         translationBuilder.add(ModBlocks.CITRINE_BLOCK, "Citrine Block");
         translationBuilder.add(ModBlocks.CITRINE_ORE, "Citrine Ore");
         translationBuilder.add(ModBlocks.DEEPSLATE_CITRINE_ORE, "Deepslate Citrine Ore");
-        translationBuilder.add(ModItemGroup.CITRINE, "Citrine Item Group");
+
+        translationBuilder.add(ModBlocks.RED_MAPLE_LOG, "Red Maple Log");
+        translationBuilder.add(ModBlocks.RED_MAPLE_WOOD, "Red Maple Wood");
+        translationBuilder.add(ModBlocks.STRIPPED_RED_MAPLE_LOG, "Stripped Red Maple Log");
+        translationBuilder.add(ModBlocks.STRIPPED_RED_MAPLE_WOOD, "Stripped Red Maple Wood");
+        translationBuilder.add(ModBlocks.RED_MAPLE_PLANKS, "Red Maple Planks");
+        translationBuilder.add(ModBlocks.RED_MAPLE_LEAVES, "Red Maple Leaves");
+        translationBuilder.add(ModBlocks.RED_MAPLE_SAPLING, "Red Maple Sapling");
     }
 }
