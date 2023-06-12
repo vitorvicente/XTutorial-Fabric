@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 3.0,
+  "group": "citrine",
+  "ingredient": {
+    "item": "xtutorial:raw_citrine"
+  },
+  "result": "xtutorial:citrine"
+}
