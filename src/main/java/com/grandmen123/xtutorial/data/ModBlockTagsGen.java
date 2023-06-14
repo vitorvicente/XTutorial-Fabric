@@ -38,6 +38,11 @@ public class ModBlockTagsGen extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(MiningLevelManager.getBlockTag(4))
                 .add(ModBlocks.DEEPSLATE_CITRINE_ORE);
 
+        getOrCreateTagBuilder(BlockTags.STONE_ORE_REPLACEABLES)
+                .add(ModBlocks.CITRINE_ORE);
+        getOrCreateTagBuilder(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
+                .add(ModBlocks.DEEPSLATE_CITRINE_ORE);
+
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.RED_MAPLE_PLANKS);
 

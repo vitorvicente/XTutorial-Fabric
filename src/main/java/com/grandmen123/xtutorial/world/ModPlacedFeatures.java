@@ -8,13 +8,16 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> RED_MAPLE_PLACED_KEY = registerKey("red_maple_placed");
+    public static final RegistryKey<PlacedFeature> CITRINE_ORE_PLACED_KEY = registerKey("citrine_ore_place");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         RegistryEntryLookup<ConfiguredFeature<?, ?>> configuredFeatureRegistryEntryLookup =
@@ -25,6 +28,11 @@ public class ModPlacedFeatures {
                  VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
                          PlacedFeatures.createCountExtraModifier(1, 0.1f, 3),
                          ModBlocks.RED_MAPLE_SAPLING));
+
+        register(context, CITRINE_ORE_PLACED_KEY,
+                 configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.CITRINE_ORE_KEY),
+                 ModOrePlacement.modifiersWithCount(16,
+                                                    HeightRangePlacementModifier.uniform(YOffset.BOTTOM, YOffset.TOP)));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {
