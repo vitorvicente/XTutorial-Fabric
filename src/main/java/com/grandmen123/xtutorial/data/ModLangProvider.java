@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.data;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.entity.ModEntities;
 import com.grandmen123.xtutorial.item.ModItemGroup;
 import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -28,5 +29,8 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.RED_MAPLE_PLANKS, "Red Maple Planks");
         translationBuilder.add(ModBlocks.RED_MAPLE_LEAVES, "Red Maple Leaves");
         translationBuilder.add(ModBlocks.RED_MAPLE_SAPLING, "Red Maple Sapling");
+
+        translationBuilder.add(ModItems.TIGER_SPAWN_EGG, "Tiger Spawn Egg");
+        translationBuilder.add(ModEntities.TIGER, "Tiger");
     }
 }

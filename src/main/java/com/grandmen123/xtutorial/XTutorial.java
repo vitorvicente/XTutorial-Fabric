@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.entity.ModEntities;
 import com.grandmen123.xtutorial.item.ModItemGroup;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.world.gen.ModWorldGen;
@@ -20,5 +21,6 @@ public class XTutorial implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModWorldGen.genModWorldGen();
+        ModEntities.register();
     }
 }
