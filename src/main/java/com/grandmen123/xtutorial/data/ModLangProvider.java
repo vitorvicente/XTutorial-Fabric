@@ -34,5 +34,6 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModEntities.TIGER, "Tiger");
 
         translationBuilder.add(ModItems.ANIMATED_ITEM, "Animated Item");
+        translationBuilder.add(ModBlocks.ANIMATED_BLOCK, "Animated Block");
     }
 }

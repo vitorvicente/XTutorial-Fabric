@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.entity.ModEntities;
+import com.grandmen123.xtutorial.item.custom.AnimatedBlockItem;
 import com.grandmen123.xtutorial.item.custom.AnimatedItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -22,6 +23,8 @@ public class ModItems {
                                                              new FabricItemSettings()));
 
     public static final Item ANIMATED_ITEM = registerItem("animated_item", new AnimatedItem(new FabricItemSettings()));
+    public static final Item ANIMATED_BLOCK_ITEM = registerItem("animated_block",
+                                                            new AnimatedBlockItem(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(XTutorial.MOD_ID, name), item);
@@ -32,6 +35,7 @@ public class ModItems {
         addToItemGroup(ModItemGroup.XTUTORIAL_CREATIVE_TAB, RAW_CITRINE);
         addToItemGroup(ModItemGroup.XTUTORIAL_CREATIVE_TAB, TIGER_SPAWN_EGG);
         addToItemGroup(ModItemGroup.XTUTORIAL_CREATIVE_TAB, ANIMATED_ITEM);
+        addToItemGroup(ModItemGroup.XTUTORIAL_CREATIVE_TAB, ANIMATED_BLOCK_ITEM);
     }
 
     private static void addToItemGroup(ItemGroup itemGroup, Item item) {

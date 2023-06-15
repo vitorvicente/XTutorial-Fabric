@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.block;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.custom.AnimatedBlock;
 import com.grandmen123.xtutorial.item.ModItemGroup;
 import com.grandmen123.xtutorial.world.tree.RedMapleSaplingGen;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -68,6 +69,10 @@ public class ModBlocks {
                           new SaplingBlock(new RedMapleSaplingGen(),
                                            FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).strength(4.0f)),
                           ModItemGroup.XTUTORIAL_CREATIVE_TAB);
+
+    public static final Block ANIMATED_BLOCK =
+            Registry.register(Registries.BLOCK, new Identifier(XTutorial.MOD_ID, "animated_block"),
+                          new AnimatedBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block, ItemGroup itemGroup) {
