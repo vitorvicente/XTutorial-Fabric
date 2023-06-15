@@ -35,5 +35,10 @@ public class ModLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.ANIMATED_ITEM, "Animated Item");
         translationBuilder.add(ModBlocks.ANIMATED_BLOCK, "Animated Block");
+
+        translationBuilder.add(ModItems.AMETHYST_HELMET, "Amethyst Helmet");
+        translationBuilder.add(ModItems.AMETHYST_CHESTPLATE, "Amethyst Chestplate");
+        translationBuilder.add(ModItems.AMETHYST_LEGGINGS, "Amethyst Leggings");
+        translationBuilder.add(ModItems.AMETHYST_BOOTS, "Amethyst Boots");
     }
 }
