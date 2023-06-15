@@ -32,5 +32,7 @@ public class ModLangProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.TIGER_SPAWN_EGG, "Tiger Spawn Egg");
         translationBuilder.add(ModEntities.TIGER, "Tiger");
+
+        translationBuilder.add(ModItems.ANIMATED_ITEM, "Animated Item");
     }
 }
