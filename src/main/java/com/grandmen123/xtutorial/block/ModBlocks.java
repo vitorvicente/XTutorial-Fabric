@@ -3,6 +3,7 @@ package com.grandmen123.xtutorial.block;
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.custom.AnimatedBlock;
 import com.grandmen123.xtutorial.item.ModItemGroup;
+import com.grandmen123.xtutorial.sound.ModSounds;
 import com.grandmen123.xtutorial.world.tree.RedMapleSaplingGen;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -72,7 +73,8 @@ public class ModBlocks {
 
     public static final Block ANIMATED_BLOCK =
             Registry.register(Registries.BLOCK, new Identifier(XTutorial.MOD_ID, "animated_block"),
-                          new AnimatedBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).nonOpaque()));
+                          new AnimatedBlock(FabricBlockSettings.of(Material.METAL).strength(2.0f).nonOpaque().sounds(
+                                  ModSounds.ANIMATED_BLOCK_SOUNDS)));
 
 
     private static Block registerBlock(String name, Block block, ItemGroup itemGroup) {

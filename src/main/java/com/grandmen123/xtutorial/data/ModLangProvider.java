@@ -40,5 +40,8 @@ public class ModLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.AMETHYST_CHESTPLATE, "Amethyst Chestplate");
         translationBuilder.add(ModItems.AMETHYST_LEGGINGS, "Amethyst Leggings");
         translationBuilder.add(ModItems.AMETHYST_BOOTS, "Amethyst Boots");
+
+        translationBuilder.add(ModItems.MUSIC_BOX_MUSIC_DISC, "Music Box Music Disc");
+        translationBuilder.add("item.xtutorial.music_box_music_disc.desc", "Music Box");
     }
 }

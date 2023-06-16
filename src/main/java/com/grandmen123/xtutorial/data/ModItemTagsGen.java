@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial.data;
 
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
@@ -41,6 +42,10 @@ public class ModItemTagsGen extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SAPLINGS)
                 .add(ModBlocks.RED_MAPLE_SAPLING.asItem())
+                .setReplace(false);
+
+        getOrCreateTagBuilder(ItemTags.MUSIC_DISCS)
+                .add(ModItems.MUSIC_BOX_MUSIC_DISC)
                 .setReplace(false);
     }
 }
