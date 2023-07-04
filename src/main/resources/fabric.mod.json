@@ -12,12 +12,15 @@
 		"homepage": "https://github.com/vitorvicente/XTutorial-Fabric",
 		"sources": "https://github.com/vitorvicente/XTutorial-Fabric"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/xtutorial/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.grandmen123.xtutorial.XTutorial"
+		],
+		"client": [
+			"com.grandmen123.xtutorial.XTutorialClient"
 		],
 		"fabric-datagen": [
 			"com.grandmen123.xtutorial.XTutorialDataGen"

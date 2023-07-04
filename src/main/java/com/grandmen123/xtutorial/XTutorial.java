@@ -12,7 +12,7 @@ public class XTutorial implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info(MOD_ID + ": Loading");
-		LOGGER.info(MOD_ID + ": Loaded");
+		LOGGER.info("Initializing Mod");
+		LOGGER.info("Finished Initializing Mod");
 	}
 }
