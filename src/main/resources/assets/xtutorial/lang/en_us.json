@@ -4,5 +4,9 @@
   "item.xtutorial.pink_garnet": "Pink Garnet",
   "item.xtutorial.raw_pink_garnet": "Raw Pink Garnet",
   "block.xtutorial.pink_garnet_block": "Pink Garnet Block",
-  "block.xtutorial.raw_pink_garnet_block": "Raw Pink Garnet Block"
+  "block.xtutorial.raw_pink_garnet_block": "Raw Pink Garnet Block",
+  "block.xtutorial.pink_garnet_ore": "Pink Garnet Ore",
+  "block.xtutorial.deepslate_pink_garnet_ore": "Deepslate Pink Garnet Ore",
+  "block.xtutorial.netherrack_pink_garnet_ore": "Netherrack Pink Garnet Ore",
+  "block.xtutorial.end_stone_pink_garnet_ore": "End Stone Pink Garnet Ore"
 }

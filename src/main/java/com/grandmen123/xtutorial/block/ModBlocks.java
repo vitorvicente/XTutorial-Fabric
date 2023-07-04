@@ -5,10 +5,12 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 import static com.grandmen123.xtutorial.XTutorial.LOGGER;
 import static com.grandmen123.xtutorial.XTutorial.MOD_ID;
@@ -18,10 +20,26 @@ public class ModBlocks {
     public static final Block PINK_GARNET_BLOCK = registerBlock(
             "pink_garnet_block", new Block(FabricBlockSettings
                                                    .copyOf(Blocks.IRON_BLOCK)));
-
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock(
             "raw_pink_garnet_block", new Block(FabricBlockSettings
-                                                   .copyOf(Blocks.IRON_BLOCK)));
+                                                       .copyOf(Blocks.DIAMOND_BLOCK)));
+
+    public static final Block PINK_GARNET_ORE = registerBlock(
+            "pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
+                                                                   .copyOf(Blocks.DIAMOND_ORE),
+                                                           UniformIntProvider.create(3, 7)));
+    public static final Block DEEPSLATE_PINK_GARNET_ORE = registerBlock(
+            "deepslate_pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
+                                                                             .copyOf(Blocks.DEEPSLATE_DIAMOND_ORE),
+                                                                     UniformIntProvider.create(3, 7)));
+    public static final Block NETHERRACK_PINK_GARNET_ORE = registerBlock(
+            "netherrack_pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
+                                                                              .copyOf(Blocks.NETHER_QUARTZ_ORE),
+                                                                      UniformIntProvider.create(3, 7)));
+    public static final Block END_STONE_PINK_GARNET_ORE = registerBlock(
+            "end_stone_pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
+                                                                             .copyOf(Blocks.END_STONE),
+                                                                     UniformIntProvider.create(3, 7)));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -42,5 +60,9 @@ public class ModBlocks {
     private static void addBlocksToItemGroup() {
         XTutorial.addToItemGroup(PINK_GARNET_BLOCK);
         XTutorial.addToItemGroup(RAW_PINK_GARNET_BLOCK);
+        XTutorial.addToItemGroup(PINK_GARNET_ORE);
+        XTutorial.addToItemGroup(DEEPSLATE_PINK_GARNET_ORE);
+        XTutorial.addToItemGroup(NETHERRACK_PINK_GARNET_ORE);
+        XTutorial.addToItemGroup(END_STONE_PINK_GARNET_ORE);
     }
 }
