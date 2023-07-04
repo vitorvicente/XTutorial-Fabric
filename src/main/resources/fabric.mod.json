@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "xtutorial",
+	"version": "${version}",
+	"name": "XTutorial",
+	"description": "A Tutorial Mod following Kaupenjoe's 1.20.X Fabric Course",
+	"authors": [
+		"grandmen123",
+		"kaupenjoe"
+	],
+	"contact": {
+		"homepage": "https://github.com/vitorvicente/XTutorial-Fabric",
+		"sources": "https://github.com/vitorvicente/XTutorial-Fabric"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/xtutorial/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.grandmen123.xtutorial.XTutorial"
+		],
+		"fabric-datagen": [
+			"com.grandmen123.xtutorial.XTutorialDataGen"
+		]
+	},
+	"mixins": [
+		"xtutorial.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+
+	}
+}
