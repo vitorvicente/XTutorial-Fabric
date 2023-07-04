@@ -26,15 +26,15 @@ public class ModBlocks {
 
     public static final Block PINK_GARNET_ORE = registerBlock(
             "pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
-                                                                   .copyOf(Blocks.DIAMOND_ORE),
+                                                                   .copyOf(Blocks.STONE),
                                                            UniformIntProvider.create(3, 7)));
     public static final Block DEEPSLATE_PINK_GARNET_ORE = registerBlock(
             "deepslate_pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
-                                                                             .copyOf(Blocks.DEEPSLATE_DIAMOND_ORE),
+                                                                             .copyOf(Blocks.DEEPSLATE),
                                                                      UniformIntProvider.create(3, 7)));
     public static final Block NETHERRACK_PINK_GARNET_ORE = registerBlock(
             "netherrack_pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
-                                                                              .copyOf(Blocks.NETHER_QUARTZ_ORE),
+                                                                              .copyOf(Blocks.NETHERRACK),
                                                                       UniformIntProvider.create(3, 7)));
     public static final Block END_STONE_PINK_GARNET_ORE = registerBlock(
             "end_stone_pink_garnet_ore", new ExperienceDroppingBlock(FabricBlockSettings
