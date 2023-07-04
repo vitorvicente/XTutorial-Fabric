@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "xtutorial:raw_pink_garnet"
+    }
+  },
+  "result": {
+    "item": "xtutorial:raw_pink_garnet_block"
+  }
+}
