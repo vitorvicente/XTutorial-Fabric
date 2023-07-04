@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "xtutorial:block/red_maple_log",
-    "side": "xtutorial:block/red_maple_log"
-  }
-}
