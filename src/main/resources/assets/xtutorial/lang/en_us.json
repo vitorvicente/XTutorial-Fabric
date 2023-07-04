@@ -8,5 +8,9 @@
   "block.xtutorial.pink_garnet_ore": "Pink Garnet Ore",
   "block.xtutorial.deepslate_pink_garnet_ore": "Deepslate Pink Garnet Ore",
   "block.xtutorial.netherrack_pink_garnet_ore": "Netherrack Pink Garnet Ore",
-  "block.xtutorial.end_stone_pink_garnet_ore": "End Stone Pink Garnet Ore"
+  "block.xtutorial.end_stone_pink_garnet_ore": "End Stone Pink Garnet Ore",
+
+  "item.xtutorial.metal_detector": "Metal Detector",
+  "item.xtutorial.metal_detector.no_valuables": "No Valuables Found",
+  "item.xtutorial.metal_detector.found_valuables": "Found Valuables: "
 }

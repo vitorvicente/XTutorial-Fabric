@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.item.custom.MetalDetectorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -15,6 +16,9 @@ public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new FabricItemSettings()));
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new FabricItemSettings()));
 
+    public static final Item METAL_DETECTOR =
+            registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(256)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -28,5 +32,7 @@ public class ModItems {
     private static void addItemsToItemGroup() {
         XTutorial.addToItemGroup(PINK_GARNET);
         XTutorial.addToItemGroup(RAW_PINK_GARNET);
+
+        XTutorial.addToItemGroup(METAL_DETECTOR);
     }
 }
