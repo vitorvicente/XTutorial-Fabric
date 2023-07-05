@@ -19,6 +19,10 @@ public class ModItems {
     public static final Item METAL_DETECTOR =
             registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(256)));
 
+    public static final Item CAULIFLOWER = registerItem("cauliflower",
+                                                        new Item(new FabricItemSettings().food(
+                                                                ModFoodComponents.CAULIFLOWER)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -34,5 +38,7 @@ public class ModItems {
         XTutorial.addToItemGroup(RAW_PINK_GARNET);
 
         XTutorial.addToItemGroup(METAL_DETECTOR);
+
+        XTutorial.addToItemGroup(CAULIFLOWER);
     }
 }
