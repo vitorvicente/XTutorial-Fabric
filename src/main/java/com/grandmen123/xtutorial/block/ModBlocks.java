@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.block;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -41,6 +42,10 @@ public class ModBlocks {
                                                                              .copyOf(Blocks.END_STONE),
                                                                      UniformIntProvider.create(3, 7)));
 
+    public static final Block SOUND_BLOCK = registerBlock(
+            "sound_block", new SoundBlock(FabricBlockSettings
+                                                  .copyOf(Blocks.IRON_BLOCK)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -64,5 +69,7 @@ public class ModBlocks {
         XTutorial.addToItemGroup(DEEPSLATE_PINK_GARNET_ORE);
         XTutorial.addToItemGroup(NETHERRACK_PINK_GARNET_ORE);
         XTutorial.addToItemGroup(END_STONE_PINK_GARNET_ORE);
+
+        XTutorial.addToItemGroup(SOUND_BLOCK);
     }
 }

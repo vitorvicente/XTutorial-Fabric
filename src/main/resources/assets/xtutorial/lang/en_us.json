@@ -12,5 +12,7 @@
 
   "item.xtutorial.metal_detector": "Metal Detector",
   "item.xtutorial.metal_detector.no_valuables": "No Valuables Found",
-  "item.xtutorial.metal_detector.found_valuables": "Found Valuables: "
+  "item.xtutorial.metal_detector.found_valuables": "Found Valuables: ",
+
+  "block.xtutorial.sound_block": "Sound Block"
 }
