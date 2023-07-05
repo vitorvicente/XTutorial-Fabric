@@ -1,9 +1,8 @@
 package com.grandmen123.xtutorial.item.custom;
 
-import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -19,21 +18,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 public class MetalDetectorItem extends Item {
-    private static final List<Block> VALUABLE_BLOCKS = List.of(Blocks.IRON_ORE, Blocks.GOLD_ORE, Blocks.COPPER_ORE,
-                                                               Blocks.DIAMOND_ORE, Blocks.EMERALD_ORE,
-                                                               Blocks.LAPIS_ORE, Blocks.REDSTONE_ORE,
-                                                               Blocks.COAL_ORE, Blocks.DEEPSLATE_COAL_ORE,
-                                                               Blocks.DEEPSLATE_COPPER_ORE, Blocks.DEEPSLATE_IRON_ORE,
-                                                               Blocks.DEEPSLATE_GOLD_ORE, Blocks.DEEPSLATE_DIAMOND_ORE,
-                                                               Blocks.DEEPSLATE_LAPIS_ORE,
-                                                               Blocks.DEEPSLATE_REDSTONE_ORE,
-                                                               Blocks.DEEPSLATE_EMERALD_ORE,
-                                                               Blocks.NETHER_GOLD_ORE,
-                                                               Blocks.NETHER_QUARTZ_ORE,
-                                                               ModBlocks.PINK_GARNET_ORE,
-                                                               ModBlocks.DEEPSLATE_PINK_GARNET_ORE,
-                                                               ModBlocks.NETHERRACK_PINK_GARNET_ORE,
-                                                               ModBlocks.END_STONE_PINK_GARNET_ORE);
 
     public MetalDetectorItem(Settings settings) {
         super(settings);
@@ -53,7 +37,7 @@ public class MetalDetectorItem extends Item {
                 BlockState blockState = context.getWorld().getBlockState(blockPos.down(i));
                 Block block = blockState.getBlock();
 
-                if (VALUABLE_BLOCKS.contains(block)) {
+                if (blockState.isIn(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS)) {
                     outputValuableCoordinates(player, blockPos.down(i), block);
                     foundBlock = true;
                     break;
