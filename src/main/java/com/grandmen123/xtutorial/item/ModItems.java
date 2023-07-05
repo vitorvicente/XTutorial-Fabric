@@ -23,6 +23,8 @@ public class ModItems {
                                                         new Item(new FabricItemSettings().food(
                                                                 ModFoodComponents.CAULIFLOWER)));
 
+    public static final Item PEAT_BRICK = registerItem("peat_brick", new Item(new FabricItemSettings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -40,5 +42,7 @@ public class ModItems {
         XTutorial.addToItemGroup(METAL_DETECTOR);
 
         XTutorial.addToItemGroup(CAULIFLOWER);
+
+        XTutorial.addToItemGroup(PEAT_BRICK);
     }
 }
