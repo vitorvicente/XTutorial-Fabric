@@ -13,8 +13,12 @@
   "item.xtutorial.metal_detector": "Metal Detector",
   "item.xtutorial.metal_detector.no_valuables": "No Valuables Found",
   "item.xtutorial.metal_detector.found_valuables": "Found Valuables: ",
+  "item.xtutorial.metal_detector.tooltip": "Press §eSHIFT§r for More Information",
+  "item.xtutorial.metal_detector.tooltip.shift": "This item can help you find ores by right clicking surface blocks!",
 
   "block.xtutorial.sound_block": "Sound Block",
+  "block.xtutorial.sound_block.tooltip": "Press §eSHIFT§r for More Information",
+  "block.xtutorial.sound_block.tooltip.shift": "Right Click this Block to Play a Sound!",
 
   "item.xtutorial.cauliflower": "Cauliflower",
 
