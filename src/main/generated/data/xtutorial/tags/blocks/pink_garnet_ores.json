@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "xtutorial:pink_garnet_ore",
+    "xtutorial:deepslate_pink_garnet_ore",
+    "xtutorial:netherrack_pink_garnet_ore",
+    "xtutorial:end_stone_pink_garnet_ore"
+  ]
+}
