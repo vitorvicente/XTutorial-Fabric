@@ -15,6 +15,8 @@ public class ModBlockLootTableGen extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINK_GARNET_BLOCK);
         addDrop(ModBlocks.PINK_GARNET_STAIRS);
         addDrop(ModBlocks.PINK_GARNET_SLAB, slabDrops(ModBlocks.PINK_GARNET_SLAB));
+        addDrop(ModBlocks.PINK_GARNET_BUTTON);
+        addDrop(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
 
         addDrop(ModBlocks.RAW_PINK_GARNET_BLOCK);
         addDrop(ModBlocks.PINK_GARNET_ORE,

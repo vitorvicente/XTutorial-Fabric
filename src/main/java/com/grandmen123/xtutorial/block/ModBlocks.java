@@ -49,6 +49,13 @@ public class ModBlocks {
                                                   FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block PINK_GARNET_SLAB = registerBlock(
             "pink_garnet_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block PINK_GARNET_BUTTON = registerBlock(
+            "pink_garnet_button", new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE_BUTTON),
+                                                  BlockSetType.IRON, 10, true));
+    public static final Block PINK_GARNET_PRESSURE_PLATE = registerBlock(
+            "pink_garnet_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                                   FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE), BlockSetType.IRON));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -70,6 +77,8 @@ public class ModBlocks {
         XTutorial.addToItemGroup(PINK_GARNET_BLOCK);
         XTutorial.addToItemGroup(PINK_GARNET_SLAB);
         XTutorial.addToItemGroup(PINK_GARNET_STAIRS);
+        XTutorial.addToItemGroup(PINK_GARNET_BUTTON);
+        XTutorial.addToItemGroup(PINK_GARNET_PRESSURE_PLATE);
 
         XTutorial.addToItemGroup(RAW_PINK_GARNET_BLOCK);
         XTutorial.addToItemGroup(PINK_GARNET_ORE);

@@ -28,5 +28,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.STAIRS)
                 .add(ModBlocks.PINK_GARNET_STAIRS.asItem());
+
+        getOrCreateTagBuilder(ItemTags.BUTTONS)
+                .add(ModBlocks.PINK_GARNET_BUTTON.asItem());
     }
 }

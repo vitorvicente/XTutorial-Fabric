@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "xtutorial:block/pink_garnet_block"
+  }
+}

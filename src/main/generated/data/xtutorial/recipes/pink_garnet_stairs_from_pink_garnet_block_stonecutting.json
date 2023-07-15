@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "xtutorial:pink_garnet_block"
+  },
+  "result": "xtutorial:pink_garnet_stairs"
+}

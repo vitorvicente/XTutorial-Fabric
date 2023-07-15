@@ -74,5 +74,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.STAIRS)
                 .add(ModBlocks.PINK_GARNET_STAIRS);
+
+        getOrCreateTagBuilder(BlockTags.BUTTONS)
+                .add(ModBlocks.PINK_GARNET_BUTTON);
+
+        getOrCreateTagBuilder(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
     }
 }

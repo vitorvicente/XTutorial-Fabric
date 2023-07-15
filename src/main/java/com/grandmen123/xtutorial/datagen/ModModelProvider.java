@@ -19,6 +19,8 @@ public class ModModelProvider extends FabricModelProvider {
                 blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.PINK_GARNET_BLOCK);
         pinkGarnetTexturePool.stairs(ModBlocks.PINK_GARNET_STAIRS);
         pinkGarnetTexturePool.slab(ModBlocks.PINK_GARNET_SLAB);
+        pinkGarnetTexturePool.button(ModBlocks.PINK_GARNET_BUTTON);
+        pinkGarnetTexturePool.pressurePlate(ModBlocks.PINK_GARNET_PRESSURE_PLATE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_PINK_GARNET_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PINK_GARNET_ORE);

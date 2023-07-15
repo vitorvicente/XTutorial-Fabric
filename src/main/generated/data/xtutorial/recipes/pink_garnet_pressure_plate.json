@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "xtutorial:pink_garnet_block"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "item": "xtutorial:pink_garnet_pressure_plate"
+  },
+  "show_notification": true
+}
