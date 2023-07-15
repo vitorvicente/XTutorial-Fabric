@@ -25,14 +25,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_GARNET_ORE)
                 .add(ModBlocks.DEEPSLATE_PINK_GARNET_ORE)
                 .add(ModBlocks.NETHERRACK_PINK_GARNET_ORE)
-                .add(ModBlocks.END_STONE_PINK_GARNET_ORE);
+                .add(ModBlocks.END_STONE_PINK_GARNET_ORE)
+                .add(ModBlocks.PINK_GARNET_STAIRS)
+                .add(ModBlocks.PINK_GARNET_SLAB);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.SOUND_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.PINK_GARNET_BLOCK)
-                .add(ModBlocks.RAW_PINK_GARNET_BLOCK);
+                .add(ModBlocks.RAW_PINK_GARNET_BLOCK)
+                .add(ModBlocks.PINK_GARNET_STAIRS)
+                .add(ModBlocks.PINK_GARNET_SLAB);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.PINK_GARNET_ORE);
@@ -64,5 +68,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
                 .add(ModBlocks.PINK_GARNET_BLOCK);
+
+        getOrCreateTagBuilder(BlockTags.SLABS)
+                .add(ModBlocks.PINK_GARNET_SLAB);
+
+        getOrCreateTagBuilder(BlockTags.STAIRS)
+                .add(ModBlocks.PINK_GARNET_STAIRS);
     }
 }

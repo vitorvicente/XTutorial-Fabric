@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "xtutorial:pink_garnet_block",
-    "xtutorial:raw_pink_garnet_block"
+    "xtutorial:raw_pink_garnet_block",
+    "xtutorial:pink_garnet_stairs",
+    "xtutorial:pink_garnet_slab"
   ]
 }

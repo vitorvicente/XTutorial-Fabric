@@ -5,6 +5,7 @@ import com.grandmen123.xtutorial.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -21,5 +22,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.DEEPSLATE_PINK_GARNET_ORE.asItem())
                 .add(ModBlocks.NETHERRACK_PINK_GARNET_ORE.asItem())
                 .add(ModBlocks.END_STONE_PINK_GARNET_ORE.asItem());
+
+        getOrCreateTagBuilder(ItemTags.SLABS)
+                .add(ModBlocks.PINK_GARNET_SLAB.asItem());
+
+        getOrCreateTagBuilder(ItemTags.STAIRS)
+                .add(ModBlocks.PINK_GARNET_STAIRS.asItem());
     }
 }

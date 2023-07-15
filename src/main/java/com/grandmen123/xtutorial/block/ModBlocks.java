@@ -4,9 +4,7 @@ import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -46,6 +44,12 @@ public class ModBlocks {
             "sound_block", new SoundBlock(FabricBlockSettings
                                                   .copyOf(Blocks.IRON_BLOCK)));
 
+    public static final Block PINK_GARNET_STAIRS = registerBlock(
+            "pink_garnet_stairs", new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(),
+                                                  FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block PINK_GARNET_SLAB = registerBlock(
+            "pink_garnet_slab", new SlabBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -64,6 +68,9 @@ public class ModBlocks {
 
     private static void addBlocksToItemGroup() {
         XTutorial.addToItemGroup(PINK_GARNET_BLOCK);
+        XTutorial.addToItemGroup(PINK_GARNET_SLAB);
+        XTutorial.addToItemGroup(PINK_GARNET_STAIRS);
+
         XTutorial.addToItemGroup(RAW_PINK_GARNET_BLOCK);
         XTutorial.addToItemGroup(PINK_GARNET_ORE);
         XTutorial.addToItemGroup(DEEPSLATE_PINK_GARNET_ORE);

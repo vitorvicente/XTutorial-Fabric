@@ -15,6 +15,9 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add("itemgroup.xtutorial", "XTutorial");
 
         translationBuilder.add(ModBlocks.PINK_GARNET_BLOCK, "Pink Garnet Block");
+        translationBuilder.add(ModBlocks.PINK_GARNET_SLAB, "Pink Garnet Slabs");
+        translationBuilder.add(ModBlocks.PINK_GARNET_STAIRS, "Pink Garnet Stairs");
+
         translationBuilder.add(ModBlocks.RAW_PINK_GARNET_BLOCK, "Raw Pink Garnet Block");
         translationBuilder.add(ModItems.PINK_GARNET, "Pink Garnet");
         translationBuilder.add(ModItems.RAW_PINK_GARNET, "Raw Pink Garnet");
