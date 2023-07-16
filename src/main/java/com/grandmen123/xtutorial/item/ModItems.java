@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.item.custom.MetalDetectorItem;
+import com.grandmen123.xtutorial.item.custom.ModPoisonSwordItem;
 import com.grandmen123.xtutorial.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
@@ -28,9 +29,9 @@ public class ModItems {
 
 
     public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
-                                                              new SwordItem(ModToolMaterial.PINK_GARNET,
-                                                                            5, -2.4f,
-                                                                            new FabricItemSettings()));
+                                                              new ModPoisonSwordItem(ModToolMaterial.PINK_GARNET,
+                                                                                     5, -2.4f,
+                                                                                     new FabricItemSettings()));
     public static final Item PINK_GARNET_PICKAXE = registerItem("pink_garnet_pickaxe",
                                                                 new PickaxeItem(ModToolMaterial.PINK_GARNET,
                                                                                 1, -2.8f,
@@ -48,9 +49,9 @@ public class ModItems {
                                                                         -4, 0.0f,
                                                                         new FabricItemSettings()));
     public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
-                                                            new PaxelItem(ModToolMaterial.PINK_GARNET,
-                                                                          10, -2.4f,
-                                                                          new FabricItemSettings()));
+                                                              new PaxelItem(ModToolMaterial.PINK_GARNET,
+                                                                            10, -2.4f,
+                                                                            new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
