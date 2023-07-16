@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.datagen;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.enchant.ModEnchants;
 import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -62,5 +63,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PINK_GARNET_BOOTS, "Pink Garnet Paxel");
 
         translationBuilder.add(ModItems.PINK_GARNET_HORSE_ARMOR, "Pink Garnet Horse Armor");
+
+        translationBuilder.add(ModEnchants.LIGHTING_STRIKER, "Lighting Striker");
     }
 }

@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.enchant.ModEnchants;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
@@ -32,6 +33,7 @@ public class XTutorial implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModRegistries.registerModStuffs();
+        ModEnchants.registerModEnchantments();
 
         LOGGER.info("Finished Initializing Mod");
     }
