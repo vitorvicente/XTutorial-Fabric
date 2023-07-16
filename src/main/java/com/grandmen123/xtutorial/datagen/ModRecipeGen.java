@@ -116,5 +116,32 @@ public class ModRecipeGen extends FabricRecipeProvider {
                                .pattern(" i ")
                                .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
                                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PINK_GARNET_HELMET)
+                               .input('#', ModItems.PINK_GARNET)
+                               .pattern("###")
+                               .pattern("# #")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PINK_GARNET_CHESTPLATE)
+                               .input('#', ModItems.PINK_GARNET)
+                               .pattern("# #")
+                               .pattern("###")
+                               .pattern("###")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PINK_GARNET_LEGGINGS)
+                               .input('#', ModItems.PINK_GARNET)
+                               .pattern("###")
+                               .pattern("# #")
+                               .pattern("# #")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.PINK_GARNET_BOOTS)
+                               .input('#', ModItems.PINK_GARNET)
+                               .pattern("# #")
+                               .pattern("# #")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
     }
 }

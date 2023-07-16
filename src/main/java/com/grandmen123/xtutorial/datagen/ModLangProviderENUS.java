@@ -55,5 +55,10 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PINK_GARNET_SHOVEL, "Pink Garnet Shovel");
         translationBuilder.add(ModItems.PINK_GARNET_HOE, "Pink Garnet Hoe");
         translationBuilder.add(ModItems.PINK_GARNET_PAXEL, "Pink Garnet Paxel");
+
+        translationBuilder.add(ModItems.PINK_GARNET_HELMET, "Pink Garnet Paxel");
+        translationBuilder.add(ModItems.PINK_GARNET_CHESTPLATE, "Pink Garnet Paxel");
+        translationBuilder.add(ModItems.PINK_GARNET_LEGGINGS, "Pink Garnet Paxel");
+        translationBuilder.add(ModItems.PINK_GARNET_BOOTS, "Pink Garnet Paxel");
     }
 }

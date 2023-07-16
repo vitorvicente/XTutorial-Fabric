@@ -6,7 +6,7 @@ import net.minecraft.util.Lazy;
 
 import java.util.function.Supplier;
 
-public enum ModToolMaterial implements ToolMaterial {
+public enum ModToolMaterials implements ToolMaterial {
     PINK_GARNET(5, 1500, 11.0f, 5.0f, 28,
                 () -> Ingredient.ofItems(ModItems.PINK_GARNET));
 
@@ -17,8 +17,8 @@ public enum ModToolMaterial implements ToolMaterial {
     private final int enchantability;
     private final Lazy<Ingredient> repairIngredient;
 
-    ModToolMaterial(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability,
-                    Supplier<Ingredient> repairIngredient) {
+    ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability,
+                     Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;

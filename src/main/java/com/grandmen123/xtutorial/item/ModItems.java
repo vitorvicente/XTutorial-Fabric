@@ -29,28 +29,46 @@ public class ModItems {
 
 
     public static final Item PINK_GARNET_SWORD = registerItem("pink_garnet_sword",
-                                                              new ModPoisonSwordItem(ModToolMaterial.PINK_GARNET,
+                                                              new ModPoisonSwordItem(ModToolMaterials.PINK_GARNET,
                                                                                      5, -2.4f,
                                                                                      new FabricItemSettings()));
     public static final Item PINK_GARNET_PICKAXE = registerItem("pink_garnet_pickaxe",
-                                                                new PickaxeItem(ModToolMaterial.PINK_GARNET,
+                                                                new PickaxeItem(ModToolMaterials.PINK_GARNET,
                                                                                 1, -2.8f,
                                                                                 new FabricItemSettings()));
     public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe",
-                                                            new AxeItem(ModToolMaterial.PINK_GARNET,
+                                                            new AxeItem(ModToolMaterials.PINK_GARNET,
                                                                         7, -3.0f,
                                                                         new FabricItemSettings()));
     public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel",
-                                                               new ShovelItem(ModToolMaterial.PINK_GARNET,
+                                                               new ShovelItem(ModToolMaterials.PINK_GARNET,
                                                                               1.5f, -3.0f,
                                                                               new FabricItemSettings()));
     public static final Item PINK_GARNET_HOE = registerItem("pink_garnet_hoe",
-                                                            new HoeItem(ModToolMaterial.PINK_GARNET,
+                                                            new HoeItem(ModToolMaterials.PINK_GARNET,
                                                                         -4, 0.0f,
                                                                         new FabricItemSettings()));
     public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
-                                                              new PaxelItem(ModToolMaterial.PINK_GARNET,
+                                                              new PaxelItem(ModToolMaterials.PINK_GARNET,
                                                                             10, -2.4f,
+                                                                            new FabricItemSettings()));
+
+
+    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
+                                                               new ArmorItem(ModItemMaterials.PINK_GARNET,
+                                                                             ArmorItem.Type.HELMET,
+                                                                             new FabricItemSettings()));
+    public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
+                                                                   new ArmorItem(ModItemMaterials.PINK_GARNET,
+                                                                                 ArmorItem.Type.CHESTPLATE,
+                                                                                 new FabricItemSettings()));
+    public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
+                                                                 new ArmorItem(ModItemMaterials.PINK_GARNET,
+                                                                               ArmorItem.Type.LEGGINGS,
+                                                                               new FabricItemSettings()));
+    public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
+                                                              new ArmorItem(ModItemMaterials.PINK_GARNET,
+                                                                            ArmorItem.Type.BOOTS,
                                                                             new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
@@ -79,5 +97,10 @@ public class ModItems {
         XTutorial.addToItemGroup(PINK_GARNET_SHOVEL);
         XTutorial.addToItemGroup(PINK_GARNET_HOE);
         XTutorial.addToItemGroup(PINK_GARNET_PAXEL);
+
+        XTutorial.addToItemGroup(PINK_GARNET_HELMET);
+        XTutorial.addToItemGroup(PINK_GARNET_CHESTPLATE);
+        XTutorial.addToItemGroup(PINK_GARNET_LEGGINGS);
+        XTutorial.addToItemGroup(PINK_GARNET_BOOTS);
     }
 }
