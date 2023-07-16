@@ -14,7 +14,7 @@ import net.minecraft.util.Util;
 import java.util.EnumMap;
 import java.util.function.Supplier;
 
-public enum ModItemMaterials implements ArmorMaterial {
+public enum ModArmorMaterials implements ArmorMaterial {
     PINK_GARNET("pink_garnet", 40, Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
         map.put(ArmorItem.Type.BOOTS, 4);
         map.put(ArmorItem.Type.LEGGINGS, 7);
@@ -44,9 +44,9 @@ public enum ModItemMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final Lazy<Ingredient> repairIngredientSupplier;
 
-    ModItemMaterials(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> protectionAmounts,
-                             int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance,
-                             Supplier<Ingredient> repairIngredientSupplier) {
+    ModArmorMaterials(String name, int durabilityMultiplier, EnumMap<ArmorItem.Type, Integer> protectionAmounts,
+                      int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance,
+                      Supplier<Ingredient> repairIngredientSupplier) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;

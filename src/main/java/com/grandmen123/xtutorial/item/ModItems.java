@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.item.custom.MetalDetectorItem;
+import com.grandmen123.xtutorial.item.custom.ModArmorItem;
 import com.grandmen123.xtutorial.item.custom.ModPoisonSwordItem;
 import com.grandmen123.xtutorial.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -55,21 +56,21 @@ public class ModItems {
 
 
     public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
-                                                               new ArmorItem(ModItemMaterials.PINK_GARNET,
-                                                                             ArmorItem.Type.HELMET,
-                                                                             new FabricItemSettings()));
+                                                               new ModArmorItem(ModArmorMaterials.PINK_GARNET,
+                                                                                ArmorItem.Type.HELMET,
+                                                                                new FabricItemSettings()));
     public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
-                                                                   new ArmorItem(ModItemMaterials.PINK_GARNET,
-                                                                                 ArmorItem.Type.CHESTPLATE,
-                                                                                 new FabricItemSettings()));
+                                                                   new ModArmorItem(ModArmorMaterials.PINK_GARNET,
+                                                                                    ArmorItem.Type.CHESTPLATE,
+                                                                                    new FabricItemSettings()));
     public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
-                                                                 new ArmorItem(ModItemMaterials.PINK_GARNET,
-                                                                               ArmorItem.Type.LEGGINGS,
-                                                                               new FabricItemSettings()));
+                                                                 new ModArmorItem(ModArmorMaterials.PINK_GARNET,
+                                                                                  ArmorItem.Type.LEGGINGS,
+                                                                                  new FabricItemSettings()));
     public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
-                                                              new ArmorItem(ModItemMaterials.PINK_GARNET,
-                                                                            ArmorItem.Type.BOOTS,
-                                                                            new FabricItemSettings()));
+                                                              new ModArmorItem(ModArmorMaterials.PINK_GARNET,
+                                                                               ArmorItem.Type.BOOTS,
+                                                                               new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
