@@ -41,10 +41,19 @@ public class ModRecipeGen extends FabricRecipeProvider {
                 .offerTo(exporter);
         offerPressurePlateRecipe(exporter, ModBlocks.PINK_GARNET_PRESSURE_PLATE, ModBlocks.PINK_GARNET_BLOCK);
         offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_BUTTON, ModItems.PINK_GARNET);
+        createFenceRecipe(ModBlocks.PINK_GARNET_FENCE, Ingredient.ofItems(ModBlocks.PINK_GARNET_BLOCK))
+                .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+        createFenceGateRecipe(ModBlocks.PINK_GARNET_FENCE_GATE, Ingredient.ofItems(ModBlocks.PINK_GARNET_BLOCK))
+                .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+        offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_WALL, ModBlocks.PINK_GARNET_BLOCK);
 
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_STAIRS,
                                 ModBlocks.PINK_GARNET_BLOCK);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_SLAB,
                                 ModBlocks.PINK_GARNET_BLOCK, 2);
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_WALL,
+                                ModBlocks.PINK_GARNET_BLOCK);
     }
 }

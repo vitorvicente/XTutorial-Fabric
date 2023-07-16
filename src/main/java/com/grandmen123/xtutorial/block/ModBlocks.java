@@ -56,6 +56,13 @@ public class ModBlocks {
             "pink_garnet_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
                                    FabricBlockSettings.copyOf(Blocks.STONE_PRESSURE_PLATE), BlockSetType.IRON));
+    public static final Block PINK_GARNET_WALL = registerBlock(
+            "pink_garnet_wall", new WallBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block PINK_GARNET_FENCE = registerBlock(
+            "pink_garnet_fence", new FenceBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
+    public static final Block PINK_GARNET_FENCE_GATE = registerBlock(
+            "pink_garnet_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), WoodType.OAK));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -79,6 +86,9 @@ public class ModBlocks {
         XTutorial.addToItemGroup(PINK_GARNET_STAIRS);
         XTutorial.addToItemGroup(PINK_GARNET_BUTTON);
         XTutorial.addToItemGroup(PINK_GARNET_PRESSURE_PLATE);
+        XTutorial.addToItemGroup(PINK_GARNET_FENCE);
+        XTutorial.addToItemGroup(PINK_GARNET_FENCE_GATE);
+        XTutorial.addToItemGroup(PINK_GARNET_WALL);
 
         XTutorial.addToItemGroup(RAW_PINK_GARNET_BLOCK);
         XTutorial.addToItemGroup(PINK_GARNET_ORE);
