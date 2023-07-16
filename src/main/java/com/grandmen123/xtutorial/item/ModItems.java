@@ -1,10 +1,7 @@
 package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
-import com.grandmen123.xtutorial.item.custom.MetalDetectorItem;
-import com.grandmen123.xtutorial.item.custom.ModArmorItem;
-import com.grandmen123.xtutorial.item.custom.ModPoisonSwordItem;
-import com.grandmen123.xtutorial.item.custom.PaxelItem;
+import com.grandmen123.xtutorial.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -72,6 +69,11 @@ public class ModItems {
                                                                                ArmorItem.Type.BOOTS,
                                                                                new FabricItemSettings()));
 
+    public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor",
+                                                                    new ModHorseArmorItem(14,
+                                                                                          "pink_garnet",
+                                                                                          new FabricItemSettings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -103,5 +105,7 @@ public class ModItems {
         XTutorial.addToItemGroup(PINK_GARNET_CHESTPLATE);
         XTutorial.addToItemGroup(PINK_GARNET_LEGGINGS);
         XTutorial.addToItemGroup(PINK_GARNET_BOOTS);
+
+        XTutorial.addToItemGroup(PINK_GARNET_HORSE_ARMOR);
     }
 }
