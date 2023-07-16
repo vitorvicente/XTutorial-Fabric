@@ -48,6 +48,13 @@ public class ModRecipeGen extends FabricRecipeProvider {
                 .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
                 .offerTo(exporter);
         offerWallRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_WALL, ModBlocks.PINK_GARNET_BLOCK);
+        createDoorRecipe(ModBlocks.PINK_GARNET_DOOR, Ingredient.ofItems(ModBlocks.PINK_GARNET_BLOCK))
+                .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+        createTrapdoorRecipe(ModBlocks.PINK_GARNET_TRAPDOOR, Ingredient.ofItems(ModBlocks.PINK_GARNET_BLOCK))
+                .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
+                .offerTo(exporter);
+
 
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_STAIRS,
                                 ModBlocks.PINK_GARNET_BLOCK);

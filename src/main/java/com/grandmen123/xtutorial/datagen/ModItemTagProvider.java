@@ -40,5 +40,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.WALLS)
                 .add(ModBlocks.PINK_GARNET_WALL.asItem());
+
+        getOrCreateTagBuilder(ItemTags.DOORS)
+                .add(ModBlocks.PINK_GARNET_DOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.TRAPDOORS)
+                .add(ModBlocks.PINK_GARNET_TRAPDOOR.asItem());
     }
 }

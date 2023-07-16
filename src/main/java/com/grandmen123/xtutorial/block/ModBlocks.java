@@ -63,6 +63,11 @@ public class ModBlocks {
     public static final Block PINK_GARNET_FENCE_GATE = registerBlock(
             "pink_garnet_fence_gate",
             new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK), WoodType.OAK));
+    public static final Block PINK_GARNET_DOOR = registerBlock(
+            "pink_garnet_door", new DoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_DOOR), BlockSetType.IRON));
+    public static final Block PINK_GARNET_TRAPDOOR = registerBlock(
+            "pink_garnet_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR), BlockSetType.IRON));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -89,6 +94,8 @@ public class ModBlocks {
         XTutorial.addToItemGroup(PINK_GARNET_FENCE);
         XTutorial.addToItemGroup(PINK_GARNET_FENCE_GATE);
         XTutorial.addToItemGroup(PINK_GARNET_WALL);
+        XTutorial.addToItemGroup(PINK_GARNET_DOOR);
+        XTutorial.addToItemGroup(PINK_GARNET_TRAPDOOR);
 
         XTutorial.addToItemGroup(RAW_PINK_GARNET_BLOCK);
         XTutorial.addToItemGroup(PINK_GARNET_ORE);
