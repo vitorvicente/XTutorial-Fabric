@@ -49,25 +49,34 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModBlocks.PINK_GARNET_TRAPDOOR.asItem());
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.PINK_GARNET_SWORD);
+                .add(ModItems.PINK_GARNET_SWORD)
+                .add(ModItems.PINK_GARNET_PAXEL);
 
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.PINK_GARNET_PICKAXE);
+                .add(ModItems.PINK_GARNET_PICKAXE)
+                .add(ModItems.PINK_GARNET_PAXEL);
 
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.PINK_GARNET_AXE);
+                .add(ModItems.PINK_GARNET_AXE)
+                .add(ModItems.PINK_GARNET_PAXEL);
 
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.PINK_GARNET_SHOVEL);
+                .add(ModItems.PINK_GARNET_SHOVEL)
+                .add(ModItems.PINK_GARNET_PAXEL);
 
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.PINK_GARNET_HOE);
+                .add(ModItems.PINK_GARNET_HOE)
+                .add(ModItems.PINK_GARNET_PAXEL);
+
+        getOrCreateTagBuilder(ModTags.Items.PAXELS)
+                .add(ModItems.PINK_GARNET_PAXEL);
 
         getOrCreateTagBuilder(ItemTags.TOOLS)
                 .add(ModItems.PINK_GARNET_SWORD)
                 .add(ModItems.PINK_GARNET_PICKAXE)
                 .add(ModItems.PINK_GARNET_AXE)
                 .add(ModItems.PINK_GARNET_SHOVEL)
-                .add(ModItems.PINK_GARNET_HOE);
+                .add(ModItems.PINK_GARNET_HOE)
+                .add(ModItems.PINK_GARNET_PAXEL);
     }
 }

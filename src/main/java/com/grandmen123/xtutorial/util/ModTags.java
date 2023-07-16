@@ -17,6 +17,8 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_PINK_GARNET_TOOL =
                 customBlockTag("fabric", "needs_tool_level_5");
 
+        public static final TagKey<Block> PAXEL_MINEABLE = createBlockTag("mineable/paxel");
+
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(MOD_ID, name));
         }
@@ -33,6 +35,8 @@ public class ModTags {
     public static class Items {
         public static final TagKey<Item> PINK_GARNET_ORES =
                 createItemTag("pink_garnet_ores");
+        public static final TagKey<Item> PAXELS =
+                createItemTag("paxels");
 
         private static TagKey<Item> createItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(MOD_ID, name));

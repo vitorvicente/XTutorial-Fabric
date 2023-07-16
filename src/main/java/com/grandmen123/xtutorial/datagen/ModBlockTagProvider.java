@@ -97,5 +97,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.TRAPDOORS)
                 .add(ModBlocks.PINK_GARNET_TRAPDOOR);
+
+        getOrCreateTagBuilder(ModTags.Blocks.PAXEL_MINEABLE)
+                .forceAddTag(BlockTags.PICKAXE_MINEABLE)
+                .forceAddTag(BlockTags.SHOVEL_MINEABLE)
+                .forceAddTag(BlockTags.AXE_MINEABLE)
+                .forceAddTag(BlockTags.HOE_MINEABLE)
+                .forceAddTag(BlockTags.SWORD_EFFICIENT);
     }
 }

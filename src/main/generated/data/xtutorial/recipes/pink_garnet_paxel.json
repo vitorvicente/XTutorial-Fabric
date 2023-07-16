@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "xtutorial:pink_garnet_sword"
+    },
+    "a": {
+      "item": "xtutorial:pink_garnet_axe"
+    },
+    "h": {
+      "item": "xtutorial:pink_garnet_hoe"
+    },
+    "i": {
+      "item": "minecraft:stick"
+    },
+    "p": {
+      "item": "xtutorial:pink_garnet_pickaxe"
+    },
+    "s": {
+      "item": "xtutorial:pink_garnet_shovel"
+    }
+  },
+  "pattern": [
+    "pSa",
+    "sih",
+    " i "
+  ],
+  "result": {
+    "item": "xtutorial:pink_garnet_paxel"
+  },
+  "show_notification": true
+}

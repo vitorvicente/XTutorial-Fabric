@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.item.custom.MetalDetectorItem;
+import com.grandmen123.xtutorial.item.custom.PaxelItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -46,6 +47,10 @@ public class ModItems {
                                                             new HoeItem(ModToolMaterial.PINK_GARNET,
                                                                         -4, 0.0f,
                                                                         new FabricItemSettings()));
+    public static final Item PINK_GARNET_PAXEL = registerItem("pink_garnet_paxel",
+                                                            new PaxelItem(ModToolMaterial.PINK_GARNET,
+                                                                          10, -2.4f,
+                                                                          new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
@@ -72,5 +77,6 @@ public class ModItems {
         XTutorial.addToItemGroup(PINK_GARNET_AXE);
         XTutorial.addToItemGroup(PINK_GARNET_SHOVEL);
         XTutorial.addToItemGroup(PINK_GARNET_HOE);
+        XTutorial.addToItemGroup(PINK_GARNET_PAXEL);
     }
 }
