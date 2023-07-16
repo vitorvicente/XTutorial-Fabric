@@ -5,6 +5,8 @@ import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 
@@ -55,12 +57,52 @@ public class ModRecipeGen extends FabricRecipeProvider {
                 .criterion("has_pink_garnet_block", conditionsFromItem(ModBlocks.PINK_GARNET_BLOCK))
                 .offerTo(exporter);
 
-
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_STAIRS,
                                 ModBlocks.PINK_GARNET_BLOCK);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_SLAB,
                                 ModBlocks.PINK_GARNET_BLOCK, 2);
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.PINK_GARNET_WALL,
                                 ModBlocks.PINK_GARNET_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PINK_GARNET_SWORD)
+                               .input('#', ModItems.PINK_GARNET)
+                               .input('i', Items.STICK)
+                               .pattern("#")
+                               .pattern("#")
+                               .pattern("i")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PINK_GARNET_PICKAXE)
+                               .input('#', ModItems.PINK_GARNET)
+                               .input('i', Items.STICK)
+                               .pattern("###")
+                               .pattern(" i ")
+                               .pattern(" i ")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PINK_GARNET_AXE)
+                               .input('#', ModItems.PINK_GARNET)
+                               .input('i', Items.STICK)
+                               .pattern("##")
+                               .pattern("#i")
+                               .pattern(" i")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PINK_GARNET_SHOVEL)
+                               .input('#', ModItems.PINK_GARNET)
+                               .input('i', Items.STICK)
+                               .pattern("#")
+                               .pattern("i")
+                               .pattern("i")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PINK_GARNET_HOE)
+                               .input('#', ModItems.PINK_GARNET)
+                               .input('i', Items.STICK)
+                               .pattern("##")
+                               .pattern(" i")
+                               .pattern(" i")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
     }
 }

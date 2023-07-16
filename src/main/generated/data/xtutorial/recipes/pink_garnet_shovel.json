@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "xtutorial:pink_garnet"
+    },
+    "i": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "#",
+    "i",
+    "i"
+  ],
+  "result": {
+    "item": "xtutorial:pink_garnet_shovel"
+  },
+  "show_notification": true
+}

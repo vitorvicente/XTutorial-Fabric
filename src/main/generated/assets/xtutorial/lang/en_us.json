@@ -24,6 +24,11 @@
   "item.xtutorial.metal_detector.tooltip.shift": "This item can help you find ores by right clicking surface blocks!",
   "item.xtutorial.peat_brick": "Peat Brick",
   "item.xtutorial.pink_garnet": "Pink Garnet",
+  "item.xtutorial.pink_garnet_axe": "Pink Garnet Axe",
+  "item.xtutorial.pink_garnet_hoe": "Pink Garnet Hoe",
+  "item.xtutorial.pink_garnet_pickaxe": "Pink Garnet Pickaxe",
+  "item.xtutorial.pink_garnet_shovel": "Pink Garnet Shovel",
+  "item.xtutorial.pink_garnet_sword": "Pink Garnet Sword",
   "item.xtutorial.raw_pink_garnet": "Raw Pink Garnet",
   "itemgroup.xtutorial": "XTutorial"
 }

@@ -42,11 +42,13 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_GARNET_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.DEEPSLATE_PINK_GARNET_ORE)
                 .add(ModBlocks.NETHERRACK_PINK_GARNET_ORE);
 
         getOrCreateTagBuilder(MiningLevelManager.getBlockTag(4))
                 .add(ModBlocks.END_STONE_PINK_GARNET_ORE);
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
+                .add(ModBlocks.DEEPSLATE_PINK_GARNET_ORE);
 
         getOrCreateTagBuilder(ModTags.Blocks.PINK_GARNET_ORES)
                 .add(ModBlocks.PINK_GARNET_ORE)

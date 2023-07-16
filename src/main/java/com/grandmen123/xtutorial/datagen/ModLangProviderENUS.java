@@ -48,5 +48,11 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
                                "Press §eSHIFT§r for More Information");
         translationBuilder.add("item.xtutorial.metal_detector.tooltip.shift",
                                "This item can help you find ores by right clicking surface blocks!");
+
+        translationBuilder.add(ModItems.PINK_GARNET_SWORD, "Pink Garnet Sword");
+        translationBuilder.add(ModItems.PINK_GARNET_PICKAXE, "Pink Garnet Pickaxe");
+        translationBuilder.add(ModItems.PINK_GARNET_AXE, "Pink Garnet Axe");
+        translationBuilder.add(ModItems.PINK_GARNET_SHOVEL, "Pink Garnet Shovel");
+        translationBuilder.add(ModItems.PINK_GARNET_HOE, "Pink Garnet Hoe");
     }
 }

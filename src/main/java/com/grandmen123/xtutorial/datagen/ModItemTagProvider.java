@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.datagen;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -46,5 +47,27 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.TRAPDOORS)
                 .add(ModBlocks.PINK_GARNET_TRAPDOOR.asItem());
+
+        getOrCreateTagBuilder(ItemTags.SWORDS)
+                .add(ModItems.PINK_GARNET_SWORD);
+
+        getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.PINK_GARNET_PICKAXE);
+
+        getOrCreateTagBuilder(ItemTags.AXES)
+                .add(ModItems.PINK_GARNET_AXE);
+
+        getOrCreateTagBuilder(ItemTags.SHOVELS)
+                .add(ModItems.PINK_GARNET_SHOVEL);
+
+        getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.PINK_GARNET_HOE);
+
+        getOrCreateTagBuilder(ItemTags.TOOLS)
+                .add(ModItems.PINK_GARNET_SWORD)
+                .add(ModItems.PINK_GARNET_PICKAXE)
+                .add(ModItems.PINK_GARNET_AXE)
+                .add(ModItems.PINK_GARNET_SHOVEL)
+                .add(ModItems.PINK_GARNET_HOE);
     }
 }

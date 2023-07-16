@@ -14,6 +14,8 @@ public class ModTags {
                 createBlockTag("metal_detector_detectable_blocks");
         public static final TagKey<Block> PINK_GARNET_ORES =
                 createBlockTag("pink_garnet_ores");
+        public static final TagKey<Block> NEEDS_PINK_GARNET_TOOL =
+                customBlockTag("fabric", "needs_tool_level_5");
 
         private static TagKey<Block> createBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(MOD_ID, name));
@@ -21,6 +23,10 @@ public class ModTags {
 
         private static TagKey<Block> createCommonBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier("c", name));
+        }
+
+        private static TagKey<Block> customBlockTag(String group, String name) {
+            return TagKey.of(RegistryKeys.BLOCK, new Identifier(group, name));
         }
     }
 
@@ -34,6 +40,10 @@ public class ModTags {
 
         private static TagKey<Item> createCommonItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier("c", name));
+        }
+
+        private static TagKey<Item> customItemTag(String group, String name) {
+            return TagKey.of(RegistryKeys.ITEM, new Identifier(group, name));
         }
     }
 }
