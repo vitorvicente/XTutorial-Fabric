@@ -65,5 +65,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add(ModItems.PINK_GARNET_HORSE_ARMOR, "Pink Garnet Horse Armor");
 
         translationBuilder.add(ModEnchants.LIGHTING_STRIKER, "Lighting Striker");
+
+        translationBuilder.add(ModBlocks.PINK_GARNET_LAMP, "Pink Garnet Lamp");
     }
 }

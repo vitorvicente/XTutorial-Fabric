@@ -4,6 +4,7 @@ import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
@@ -149,6 +150,15 @@ public class ModRecipeGen extends FabricRecipeProvider {
                                .pattern("  #")
                                .pattern("###")
                                .pattern("# #")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_LAMP)
+                               .input('#', ModItems.PINK_GARNET)
+                               .input('i', Blocks.GLOWSTONE)
+                               .pattern(" # ")
+                               .pattern("#i#")
+                               .pattern(" # ")
                                .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
                                .offerTo(exporter);
     }

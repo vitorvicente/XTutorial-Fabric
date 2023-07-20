@@ -1,13 +1,15 @@
 package com.grandmen123.xtutorial.datagen;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.block.Block;
+import net.minecraft.data.client.*;
 import net.minecraft.item.ArmorItem;
+import net.minecraft.state.property.BooleanProperty;
+import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -36,6 +38,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.END_STONE_PINK_GARNET_ORE);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SOUND_BLOCK);
+
+        registerCustomLamp(blockStateModelGenerator, ModBlocks.PINK_GARNET_LAMP, PinkGarnetLampBlock.CLICKED);
     }
 
     @Override
@@ -62,5 +66,21 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.PINK_GARNET_BOOTS);
 
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
+    }
+
+    private void registerCustomLamp(BlockStateModelGenerator blockStateModelGenerator, Block block,
+                                        BooleanProperty booleanProperty) {
+        Identifier identifier = TexturedModel
+                .CUBE_ALL.upload(block, blockStateModelGenerator.modelCollector);
+        Identifier identifier2 = blockStateModelGenerator
+                .createSubModel(block, "_on", Models.CUBE_ALL, TextureMap::all);
+
+        blockStateModelGenerator.blockStateCollector
+                .accept(VariantsBlockStateSupplier.create(block)
+                                                  .coordinate(BlockStateModelGenerator
+                                                                      .createBooleanModelMap(
+                                                                              booleanProperty,
+                                                                              identifier2,
+                                                                              identifier)));
     }
 }

@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.block;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -69,6 +70,12 @@ public class ModBlocks {
             "pink_garnet_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.IRON_TRAPDOOR), BlockSetType.IRON));
 
+    public static final Block PINK_GARNET_LAMP = registerBlock(
+            "pink_garnet_lamp_block",
+            new PinkGarnetLampBlock(
+                    FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)
+                                       .luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -104,5 +111,7 @@ public class ModBlocks {
         XTutorial.addToItemGroup(END_STONE_PINK_GARNET_ORE);
 
         XTutorial.addToItemGroup(SOUND_BLOCK);
+
+        XTutorial.addToItemGroup(PINK_GARNET_LAMP);
     }
 }
