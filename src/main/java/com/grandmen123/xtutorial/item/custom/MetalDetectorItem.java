@@ -1,5 +1,7 @@
 package com.grandmen123.xtutorial.item.custom;
 
+import com.grandmen123.xtutorial.item.ModItems;
+import com.grandmen123.xtutorial.util.InventoryUtil;
 import com.grandmen123.xtutorial.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -9,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -38,8 +41,8 @@ public class MetalDetectorItem extends Item {
                 Block block = blockState.getBlock();
 
                 if (blockState.isIn(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS)) {
-                    outputValuableCoordinates(player, blockPos.down(i), block);
                     foundBlock = true;
+                    handleFoundData(player, blockPos.down(i), block);
                     break;
                 }
             }
@@ -51,7 +54,26 @@ public class MetalDetectorItem extends Item {
         context.getStack().damage(1, context.getPlayer(),
                                   playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
 
+
+
         return super.useOnBlock(context);
+    }
+
+    private void handleFoundData(PlayerEntity player, BlockPos down, Block block) {
+        Text message = Text.translatable("item.xtutorial.metal_detector.found_valuables")
+                           .append(Text.literal(" " + block.getName().getString() + " @ "
+                                                + down.getX() + ", "
+                                                + down.getY() + ", "
+                                                + down.getZ()));
+
+        if (InventoryUtil.playerHasStackInInventory(player, ModItems.DATA_TABLET)) {
+            int index = InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET);
+            NbtCompound nbtData = new NbtCompound();
+            nbtData.putString(DataTabletItem.LAST_VALUABLE_FOUND_NBT_KEY, message.getString());
+            player.getInventory().getStack(index).setNbt(nbtData);
+        }
+
+        player.sendMessage(message);
     }
 
     @Override
@@ -62,13 +84,5 @@ public class MetalDetectorItem extends Item {
             tooltip.add(Text.translatable("item.xtutorial.metal_detector.tooltip"));
         }
         super.appendTooltip(stack, world, tooltip, context);
-    }
-
-    private void outputValuableCoordinates(PlayerEntity player, BlockPos blockPos, Block block) {
-        player.sendMessage(Text.translatable("item.xtutorial.metal_detector.found_valuables")
-                               .append(Text.literal(block.getName().getString() + " @ "
-                                                    + blockPos.getX() + ", "
-                                                    + blockPos.getY() + ", "
-                                                    + blockPos.getZ())));
     }
 }

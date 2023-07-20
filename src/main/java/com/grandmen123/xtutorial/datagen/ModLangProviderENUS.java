@@ -67,5 +67,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add(ModEnchants.LIGHTING_STRIKER, "Lighting Striker");
 
         translationBuilder.add(ModBlocks.PINK_GARNET_LAMP, "Pink Garnet Lamp");
+
+        translationBuilder.add(ModItems.DATA_TABLET, "Data Tablet");
     }
 }

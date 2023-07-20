@@ -74,6 +74,9 @@ public class ModItems {
                                                                                           "pink_garnet",
                                                                                           new FabricItemSettings()));
 
+    public static final Item DATA_TABLET = registerItem("data_tablet",
+                                                        new DataTabletItem(new FabricItemSettings().maxCount(1)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -107,5 +110,7 @@ public class ModItems {
         XTutorial.addToItemGroup(PINK_GARNET_BOOTS);
 
         XTutorial.addToItemGroup(PINK_GARNET_HORSE_ARMOR);
+
+        XTutorial.addToItemGroup(DATA_TABLET);
     }
 }
