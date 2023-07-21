@@ -1,6 +1,14 @@
 {
   "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "xtutorial:item/data_tablet_on",
+      "predicate": {
+        "xtutorial:on": 1
+      }
+    }
+  ],
   "textures": {
-    "layer0": "xtutorial:item/data_tablet"
+    "layer0": "xtutorial:item/data_tablet_off"
   }
 }
