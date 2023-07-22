@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.block.custom.CauliflowerCropBlock;
 import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.util.ModModelPredicateProvider;
@@ -47,6 +48,9 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SOUND_BLOCK);
 
         registerCustomLamp(blockStateModelGenerator, ModBlocks.PINK_GARNET_LAMP, PinkGarnetLampBlock.CLICKED);
+
+        blockStateModelGenerator.registerCrop(ModBlocks.CAULIFLOWER_CROP, CauliflowerCropBlock.AGE,
+                                              0, 1, 2, 3, 4, 5, 6);
     }
 
     @Override
@@ -74,7 +78,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
 
-        genOnOffItem(itemModelGenerator, ModItems.DATA_TABLET);
+        registerOnOffItem(itemModelGenerator, ModItems.DATA_TABLET);
     }
 
     private void registerCustomLamp(BlockStateModelGenerator blockStateModelGenerator, Block block,
@@ -93,7 +97,7 @@ public class ModModelProvider extends FabricModelProvider {
                                                                               identifier)));
     }
 
-    private void genOnOffItem(ItemModelGenerator itemModelGenerator, Item item) {
+    private void registerOnOffItem(ItemModelGenerator itemModelGenerator, Item item) {
         Identifier defaultItem = ModelIds.getItemModelId(item);
         Identifier itemOn = ModelIds.getItemSubModelId(item, "_" + ModModelPredicateProvider.PREDICATE_ON_SUFFIX);
         Identifier itemOff = ModelIds.getItemSubModelId(item, "_" + ModModelPredicateProvider.PREDICATE_OFF_SUFFIX);

@@ -69,5 +69,8 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.PINK_GARNET_LAMP, "Pink Garnet Lamp");
 
         translationBuilder.add(ModItems.DATA_TABLET, "Data Tablet");
+
+        translationBuilder.add(ModItems.CAULIFLOWER, "Cauliflower");
+        translationBuilder.add(ModItems.CAULIFLOWER_SEEDS, "Cauliflower Seeds");
     }
 }

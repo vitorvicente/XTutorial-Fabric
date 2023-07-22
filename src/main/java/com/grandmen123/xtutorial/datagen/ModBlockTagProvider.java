@@ -30,7 +30,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_GARNET_SLAB);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(ModBlocks.SOUND_BLOCK);
+                .add(ModBlocks.SOUND_BLOCK)
+                .add(ModBlocks.CAULIFLOWER_CROP);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.PINK_GARNET_BLOCK)
@@ -104,5 +105,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .forceAddTag(BlockTags.AXE_MINEABLE)
                 .forceAddTag(BlockTags.HOE_MINEABLE)
                 .forceAddTag(BlockTags.SWORD_EFFICIENT);
+
+        getOrCreateTagBuilder(BlockTags.CROPS)
+                .add(ModBlocks.CAULIFLOWER_CROP);
     }
 }

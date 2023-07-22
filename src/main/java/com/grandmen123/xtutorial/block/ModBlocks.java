@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.block;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.custom.CauliflowerCropBlock;
 import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -76,15 +77,24 @@ public class ModBlocks {
                     FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)
                                        .luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
 
+    public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem(
+            "cauliflower_crop", new CauliflowerCropBlock(FabricBlockSettings
+                                                                 .copyOf(Blocks.WHEAT)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return registerBlockWithoutBlockItem(name, block);
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(MOD_ID, name), block);
+
     }
 
     private static void registerBlockItem(String name, Block block) {
-        Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), new BlockItem(block,
-                                                                                       new FabricItemSettings()));
+        Registry.register(Registries.ITEM, new Identifier(MOD_ID, name),
+                          new BlockItem(block, new FabricItemSettings()));
     }
 
     public static void registerModBlocks() {

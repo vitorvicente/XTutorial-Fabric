@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
+import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
@@ -22,6 +23,9 @@ public class ModItems {
     public static final Item CAULIFLOWER = registerItem("cauliflower",
                                                         new Item(new FabricItemSettings().food(
                                                                 ModFoodComponents.CAULIFLOWER)));
+    public static final Item CAULIFLOWER_SEEDS = registerItem("cauliflower_seeds",
+                                                              new AliasedBlockItem(ModBlocks.CAULIFLOWER_CROP,
+                                                                                   new FabricItemSettings()));
 
     public static final Item PEAT_BRICK = registerItem("peat_brick", new Item(new FabricItemSettings()));
 
@@ -94,6 +98,7 @@ public class ModItems {
         XTutorial.addToItemGroup(METAL_DETECTOR);
 
         XTutorial.addToItemGroup(CAULIFLOWER);
+        XTutorial.addToItemGroup(CAULIFLOWER_SEEDS);
 
         XTutorial.addToItemGroup(PEAT_BRICK);
 
