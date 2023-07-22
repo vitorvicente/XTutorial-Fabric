@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Entity.class)
 public abstract class ModEntityDataSaverMixin implements IEntityDataSaver {
-    protected static final String PERSISTENT_DATA_KEY = XTutorial.MOD_ID + ".persistent_data";
+    private static final String PERSISTENT_DATA_KEY = XTutorial.MOD_ID + ".persistent_data";
     private NbtCompound persistentData;
 
     @Override

@@ -72,5 +72,15 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.CAULIFLOWER, "Cauliflower");
         translationBuilder.add(ModItems.CAULIFLOWER_SEEDS, "Cauliflower Seeds");
+
+
+        translationBuilder.add("command.xtutorial.home.set.failure",
+                               "Unable to Set Home Here!");
+        translationBuilder.add("command.xtutorial.home.set.success",
+                               "Set Home at: ");
+        translationBuilder.add("command.xtutorial.home.failure",
+                               "Unable to Teleport Home!");
+        translationBuilder.add("command.xtutorial.home.success",
+                               "Teleported to Home at: ");
     }
 }
