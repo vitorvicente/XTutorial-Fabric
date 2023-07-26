@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.item.custom;
 
 import com.grandmen123.xtutorial.item.ModItems;
+import com.grandmen123.xtutorial.sound.ModSounds;
 import com.grandmen123.xtutorial.util.InventoryUtil;
 import com.grandmen123.xtutorial.util.ModTags;
 import net.minecraft.block.Block;
@@ -12,6 +13,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
@@ -72,6 +74,8 @@ public class MetalDetectorItem extends Item {
             nbtData.putString(DataTabletItem.LAST_VALUABLE_FOUND_NBT_KEY, message.getString());
             player.getInventory().getStack(index).setNbt(nbtData);
         }
+
+        player.playSound(ModSounds.METAL_DETECTOR_FOUND_ORE, SoundCategory.BLOCKS, 1.0f, 1.0f);
 
         player.sendMessage(message);
     }

@@ -24,6 +24,5 @@ public class ModEnchants {
 
     public static void registerModEnchantments() {
         LOGGER.info("Registering Mod Enchantments");
-
     }
 }

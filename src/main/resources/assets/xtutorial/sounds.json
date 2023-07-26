@@ -1,0 +1,8 @@
+{
+  "metal_detector_found_ore": {
+    "subtitle": "sounds.xtutorial.metal_detector_found_ore",
+    "sounds": [
+      "xtutorial:metal_detector_found_ore"
+    ]
+  }
+}

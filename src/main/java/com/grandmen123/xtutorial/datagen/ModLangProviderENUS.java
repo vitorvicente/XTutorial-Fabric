@@ -75,6 +75,8 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.PETUNIA, "Petunia");
 
+        translationBuilder.add("sound.xtutorial.metal_detector_found_ore", "Metal Detector Found Ore!");
+
         translationBuilder.add("command.xtutorial.home.set.failure",
                                "Unable to Set Home Here!");
         translationBuilder.add("command.xtutorial.home.set.success",
