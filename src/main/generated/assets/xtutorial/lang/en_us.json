@@ -45,5 +45,7 @@
   "item.xtutorial.pink_garnet_shovel": "Pink Garnet Shovel",
   "item.xtutorial.pink_garnet_sword": "Pink Garnet Sword",
   "item.xtutorial.raw_pink_garnet": "Raw Pink Garnet",
-  "itemgroup.xtutorial": "XTutorial"
+  "itemgroup.xtutorial": "XTutorial",
+  "xtutorial.event.hit.sheep": "just hurt a sheep!",
+  "xtutorial.event.hit.sheep.pink_garnet_sword": "just hurt a sheep with our custom Sword!"
 }

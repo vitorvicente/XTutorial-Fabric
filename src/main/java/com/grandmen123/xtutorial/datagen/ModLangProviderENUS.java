@@ -82,5 +82,11 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
                                "Unable to Teleport Home!");
         translationBuilder.add("command.xtutorial.home.success",
                                "Teleported to Home at: ");
+
+
+        translationBuilder.add("xtutorial.event.hit.sheep.pink_garnet_sword",
+                               "just hurt a sheep with our custom Sword!");
+        translationBuilder.add("xtutorial.event.hit.sheep",
+                               "just hurt a sheep!");
     }
 }

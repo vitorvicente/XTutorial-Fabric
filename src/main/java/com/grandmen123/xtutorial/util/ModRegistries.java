@@ -1,6 +1,5 @@
 package com.grandmen123.xtutorial.util;
 
-import com.grandmen123.xtutorial.cmd.ModCommands;
 import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.ComposterBlock;
@@ -9,7 +8,6 @@ public class ModRegistries {
     public static void registerModStuffs() {
         registerFuels();
         registerModCompostables();
-        ModCommands.registerCommands();
     }
 
     private static void registerFuels() {
