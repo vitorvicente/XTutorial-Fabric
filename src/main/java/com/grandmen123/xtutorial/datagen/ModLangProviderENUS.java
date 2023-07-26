@@ -73,6 +73,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add(ModItems.CAULIFLOWER, "Cauliflower");
         translationBuilder.add(ModItems.CAULIFLOWER_SEEDS, "Cauliflower Seeds");
 
+        translationBuilder.add(ModBlocks.PETUNIA, "Petunia");
 
         translationBuilder.add("command.xtutorial.home.set.failure",
                                "Unable to Set Home Here!");
@@ -87,7 +88,6 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
                                "Set own game mode to ");
         translationBuilder.add("command.xtutorial.gm.failure",
                                "Failed to set own game mode!");
-
 
 
         translationBuilder.add("xtutorial.event.hit.sheep.pink_garnet_sword",

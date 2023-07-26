@@ -87,5 +87,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.VILLAGER_PLANTABLE_SEEDS)
                 .add(ModItems.CAULIFLOWER_SEEDS);
+
+        getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
+                .add(ModBlocks.PETUNIA.asItem());
     }
 }

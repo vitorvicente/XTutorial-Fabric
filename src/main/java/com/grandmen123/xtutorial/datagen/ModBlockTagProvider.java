@@ -108,5 +108,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.CROPS)
                 .add(ModBlocks.CAULIFLOWER_CROP);
+
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .add(ModBlocks.PETUNIA);
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.POTTED_PETUNIA);
     }
 }

@@ -7,6 +7,7 @@ import com.grandmen123.xtutorial.block.custom.SoundBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -81,6 +82,12 @@ public class ModBlocks {
             "cauliflower_crop", new CauliflowerCropBlock(FabricBlockSettings
                                                                  .copyOf(Blocks.WHEAT)));
 
+    public static final Block PETUNIA = registerBlock(
+            "petunia", new FlowerBlock(StatusEffects.ABSORPTION, 5,
+                                       FabricBlockSettings.copyOf(Blocks.ALLIUM)));
+    public static final Block POTTED_PETUNIA = registerBlockWithoutBlockItem(
+            "potted_petunia", new FlowerPotBlock(PETUNIA, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
@@ -123,5 +130,7 @@ public class ModBlocks {
         XTutorial.addToItemGroup(SOUND_BLOCK);
 
         XTutorial.addToItemGroup(PINK_GARNET_LAMP);
+
+        XTutorial.addToItemGroup(PETUNIA);
     }
 }
