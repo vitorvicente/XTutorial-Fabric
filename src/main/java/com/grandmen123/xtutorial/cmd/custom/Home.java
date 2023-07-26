@@ -26,7 +26,7 @@ public class Home {
         IEntityDataSaver player = ((IEntityDataSaver) context.getSource().getPlayer());
         if (player == null || player.getPersistentData().getIntArray(HOME_POS_KEY).length != 3) {
             context.getSource().sendFeedback(() -> Text.translatable("command.xtutorial.home.failure"), false);
-            return 0;
+            return -1;
         }
         int[] homePos = player.getPersistentData().getIntArray(HOME_POS_KEY);
 
@@ -38,14 +38,14 @@ public class Home {
                                                                         + ", " + homePos[2] + ")")),
                                          false);
 
-        return 1;
+        return 0;
     }
 
     public static int runSet(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         IEntityDataSaver player = ((IEntityDataSaver) context.getSource().getPlayer());
         if (player == null) {
             context.getSource().sendFeedback(() -> Text.translatable("command.xtutorial.home.set.failure"), false);
-            return 0;
+            return -1;
         }
 
         BlockPos playerPos = context.getSource().getPlayer().getBlockPos();
@@ -58,6 +58,6 @@ public class Home {
                                                                         + ", " + playerPos.getY()
                                                                         + ", " + playerPos.getZ() + ")")),
                                          false);
-        return 1;
+        return 0;
     }
 }

@@ -18,6 +18,8 @@
   "block.xtutorial.sound_block": "Sound Block",
   "block.xtutorial.sound_block.tooltip": "Press §eSHIFT§r for More Information",
   "block.xtutorial.sound_block.tooltip.shift": "Right Click this Block to Play a Sound!",
+  "command.xtutorial.gm.failure": "Failed to set own game mode!",
+  "command.xtutorial.gm.success": "Set own game mode to ",
   "command.xtutorial.home.failure": "Unable to Teleport Home!",
   "command.xtutorial.home.set.failure": "Unable to Set Home Here!",
   "command.xtutorial.home.set.success": "Set Home at: ",

@@ -83,6 +83,12 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add("command.xtutorial.home.success",
                                "Teleported to Home at: ");
 
+        translationBuilder.add("command.xtutorial.gm.success",
+                               "Set own game mode to ");
+        translationBuilder.add("command.xtutorial.gm.failure",
+                               "Failed to set own game mode!");
+
+
 
         translationBuilder.add("xtutorial.event.hit.sheep.pink_garnet_sword",
                                "just hurt a sheep with our custom Sword!");
