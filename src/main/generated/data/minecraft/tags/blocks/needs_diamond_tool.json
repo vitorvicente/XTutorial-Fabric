@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "xtutorial:netherrack_pink_garnet_ore"
+    "xtutorial:netherrack_pink_garnet_ore",
+    "xtutorial:gem_empowering_station"
   ]
 }

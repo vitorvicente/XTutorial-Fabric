@@ -161,5 +161,14 @@ public class ModRecipeGen extends FabricRecipeProvider {
                                .pattern(" # ")
                                .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
                                .offerTo(exporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.GEM_EMPOWERING_STATION)
+                               .input('i', ModItems.PINK_GARNET)
+                               .input('#', Blocks.IRON_BLOCK)
+                               .pattern(" i ")
+                               .pattern("###")
+                               .pattern("# #")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
     }
 }

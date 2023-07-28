@@ -44,8 +44,11 @@ public class ModBlockLootTableGen extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SOUND_BLOCK);
         genCropDrop(ModBlocks.CAULIFLOWER_CROP, ModItems.CAULIFLOWER, ModItems.CAULIFLOWER_SEEDS,
                     CauliflowerCropBlock.AGE, CauliflowerCropBlock.MAX_AGE);
+
+        addDrop(ModBlocks.GEM_EMPOWERING_STATION);
     }
 
+    @SuppressWarnings("SameParameterValue")
     private void genCropDrop(Block block, Item crop, Item seeds, IntProperty ageProperty, int maxAge) {
         BlockStatePropertyLootCondition.Builder builder =
                 BlockStatePropertyLootCondition.builder(block).properties(

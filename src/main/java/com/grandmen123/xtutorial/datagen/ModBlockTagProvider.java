@@ -27,7 +27,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.NETHERRACK_PINK_GARNET_ORE)
                 .add(ModBlocks.END_STONE_PINK_GARNET_ORE)
                 .add(ModBlocks.PINK_GARNET_STAIRS)
-                .add(ModBlocks.PINK_GARNET_SLAB);
+                .add(ModBlocks.PINK_GARNET_SLAB)
+                .add(ModBlocks.GEM_EMPOWERING_STATION);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
                 .add(ModBlocks.SOUND_BLOCK)
@@ -43,7 +44,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.PINK_GARNET_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.NETHERRACK_PINK_GARNET_ORE);
+                .add(ModBlocks.NETHERRACK_PINK_GARNET_ORE)
+                .add(ModBlocks.GEM_EMPOWERING_STATION);
 
         getOrCreateTagBuilder(MiningLevelManager.getBlockTag(4))
                 .add(ModBlocks.END_STONE_PINK_GARNET_ORE);

@@ -106,5 +106,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add(ModItems.BAR_BRAWL_MUSIC_DISC, "Bar Brawl Music Disc");
         translationBuilder.add("item.xtutorial.bar_brawl_music_disc.desc", "Bryan Tech - Bar Brawl (CC0)");
         translationBuilder.add("sound.xtutorial.bar_brawl", "Bar Brawl!");
+
+        translationBuilder.add(ModBlocks.GEM_EMPOWERING_STATION, "Gem Empowering Station");
     }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_block"
+    },
+    "i": {
+      "item": "xtutorial:pink_garnet"
+    }
+  },
+  "pattern": [
+    " i ",
+    "###",
+    "# #"
+  ],
+  "result": {
+    "item": "xtutorial:gem_empowering_station"
+  },
+  "show_notification": true
+}

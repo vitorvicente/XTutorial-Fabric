@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial.block;
 
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.custom.CauliflowerCropBlock;
+import com.grandmen123.xtutorial.block.custom.GemEmpoweringStationBlock;
 import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.block.custom.SoundBlock;
 import com.grandmen123.xtutorial.sound.ModSounds;
@@ -91,6 +92,11 @@ public class ModBlocks {
             "potted_petunia", new FlowerPotBlock(PETUNIA, FabricBlockSettings.copyOf(Blocks.POTTED_ALLIUM)));
 
 
+    public static final Block GEM_EMPOWERING_STATION = registerBlock(
+            "gem_empowering_station", new GemEmpoweringStationBlock(FabricBlockSettings
+                                                                            .copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
         return registerBlockWithoutBlockItem(name, block);
@@ -134,5 +140,7 @@ public class ModBlocks {
         XTutorial.addToItemGroup(PINK_GARNET_LAMP);
 
         XTutorial.addToItemGroup(PETUNIA);
+
+        XTutorial.addToItemGroup(GEM_EMPOWERING_STATION);
     }
 }

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "xtutorial:block/gem_empowering_station",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "xtutorial:block/gem_empowering_station"
+    },
+    "facing=south": {
+      "model": "xtutorial:block/gem_empowering_station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "xtutorial:block/gem_empowering_station",
+      "y": 270
+    }
+  }
+}
