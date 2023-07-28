@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "xtutorial:data_tablet",
+    "xtutorial:radiation_staff",
+    "xtutorial:metal_detector"
+  ]
+}

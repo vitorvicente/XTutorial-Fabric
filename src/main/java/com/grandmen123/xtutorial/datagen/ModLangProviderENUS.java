@@ -108,5 +108,6 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add("sound.xtutorial.bar_brawl", "Bar Brawl!");
 
         translationBuilder.add(ModBlocks.GEM_EMPOWERING_STATION, "Gem Empowering Station");
+        translationBuilder.add(ModItems.RADIATION_STAFF, "Radiation Staff");
     }
 }

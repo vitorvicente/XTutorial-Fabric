@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "minecraft:emerald"
+    },
+    "i": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "#",
+    "i",
+    "i"
+  ],
+  "result": {
+    "item": "xtutorial:radiation_staff"
+  },
+  "show_notification": true
+}

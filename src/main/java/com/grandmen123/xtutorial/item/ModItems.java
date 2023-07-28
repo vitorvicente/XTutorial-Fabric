@@ -79,14 +79,17 @@ public class ModItems {
                                                                                           "pink_garnet",
                                                                                           new FabricItemSettings()));
 
-    public static final Item DATA_TABLET = registerItem("data_tablet",
-                                                        new DataTabletItem(new FabricItemSettings().maxCount(1)));
+    public static final Item DATA_TABLET =
+            registerItem("data_tablet", new DataTabletItem(new FabricItemSettings().maxCount(1)));
 
     public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
                                                                  new MusicDiscItem(9,
                                                                                    ModSounds.BAR_BRAWL,
                                                                                    new FabricItemSettings().maxCount(1),
                                                                                    122));
+
+    public static final Item RADIATION_STAFF =
+            registerItem("radiation_staff", new RadiationStaffItem(new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
@@ -126,5 +129,7 @@ public class ModItems {
         XTutorial.addToItemGroup(DATA_TABLET);
 
         XTutorial.addToItemGroup(BAR_BRAWL_MUSIC_DISC);
+
+        XTutorial.addToItemGroup(RADIATION_STAFF);
     }
 }

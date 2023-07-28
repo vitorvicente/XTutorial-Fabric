@@ -23,10 +23,12 @@ public class ModTags {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(MOD_ID, name));
         }
 
+        @SuppressWarnings("unused")
         private static TagKey<Block> createCommonBlockTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier("c", name));
         }
 
+        @SuppressWarnings("SameParameterValue")
         private static TagKey<Block> customBlockTag(String group, String name) {
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(group, name));
         }
@@ -38,14 +40,19 @@ public class ModTags {
         public static final TagKey<Item> PAXELS =
                 createItemTag("paxels");
 
+        public static final TagKey<Item> ADVANCED_TOOLS =
+                createItemTag("advanced_tools");
+
         private static TagKey<Item> createItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(MOD_ID, name));
         }
 
+        @SuppressWarnings("unused")
         private static TagKey<Item> createCommonItemTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier("c", name));
         }
 
+        @SuppressWarnings("unused")
         private static TagKey<Item> customItemTag(String group, String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(group, name));
         }
