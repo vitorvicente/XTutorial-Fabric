@@ -46,6 +46,9 @@ public class ModBlockLootTableGen extends FabricBlockLootTableProvider {
                     CauliflowerCropBlock.AGE, CauliflowerCropBlock.MAX_AGE);
 
         addDrop(ModBlocks.GEM_EMPOWERING_STATION);
+
+        addPottedPlantDrops(ModBlocks.POTTED_PETUNIA);
+        addDrop(ModBlocks.PETUNIA);
     }
 
     @SuppressWarnings("SameParameterValue")
