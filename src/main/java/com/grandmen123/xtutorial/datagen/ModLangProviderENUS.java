@@ -102,5 +102,9 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
                                "just hurt a sheep with our custom Sword!");
         translationBuilder.add("xtutorial.event.hit.sheep",
                                "just hurt a sheep!");
+
+        translationBuilder.add(ModItems.BAR_BRAWL_MUSIC_DISC, "Bar Brawl Music Disc");
+        translationBuilder.add("item.xtutorial.bar_brawl_music_disc.desc", "Bryan Tech - Bar Brawl (CC0)");
+        translationBuilder.add("sound.xtutorial.bar_brawl", "Bar Brawl!");
     }
 }

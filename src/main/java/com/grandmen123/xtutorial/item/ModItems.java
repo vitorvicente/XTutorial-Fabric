@@ -3,6 +3,7 @@ package com.grandmen123.xtutorial.item;
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.item.custom.*;
+import com.grandmen123.xtutorial.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -81,6 +82,12 @@ public class ModItems {
     public static final Item DATA_TABLET = registerItem("data_tablet",
                                                         new DataTabletItem(new FabricItemSettings().maxCount(1)));
 
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+                                                                 new MusicDiscItem(9,
+                                                                                   ModSounds.BAR_BRAWL,
+                                                                                   new FabricItemSettings().maxCount(1),
+                                                                                   122));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -117,5 +124,7 @@ public class ModItems {
         XTutorial.addToItemGroup(PINK_GARNET_HORSE_ARMOR);
 
         XTutorial.addToItemGroup(DATA_TABLET);
+
+        XTutorial.addToItemGroup(BAR_BRAWL_MUSIC_DISC);
     }
 }

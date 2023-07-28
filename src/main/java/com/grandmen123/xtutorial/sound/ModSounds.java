@@ -23,6 +23,7 @@ public class ModSounds {
                                 PINK_GARNET_LAMP_BREAK, PINK_GARNET_LAMP_STEP, PINK_GARNET_LAMP_PLACE,
                                 PINK_GARNET_LAMP_HIT, PINK_GARNET_LAMP_FALL);
 
+    public static final SoundEvent BAR_BRAWL = registerSoundEvent("bar_brawl");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier identifier = new Identifier(XTutorial.MOD_ID, name);

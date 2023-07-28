@@ -82,6 +82,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
 
         registerOnOffItem(itemModelGenerator, ModItems.DATA_TABLET);
+
+        itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
     }
 
     private void registerCustomLamp(BlockStateModelGenerator blockStateModelGenerator, Block block,
