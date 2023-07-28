@@ -86,6 +86,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
     }
 
+    @SuppressWarnings("SameParameterValue")
     private void registerCustomLamp(BlockStateModelGenerator blockStateModelGenerator, Block block,
                                     BooleanProperty booleanProperty) {
         Identifier identifier = TexturedModel
@@ -102,6 +103,7 @@ public class ModModelProvider extends FabricModelProvider {
                                                                               identifier)));
     }
 
+    @SuppressWarnings("SameParameterValue")
     private void registerOnOffItem(ItemModelGenerator itemModelGenerator, Item item) {
         Identifier defaultItem = ModelIds.getItemModelId(item);
         Identifier itemOn = ModelIds.getItemSubModelId(item, "_" + ModModelPredicateProvider.PREDICATE_ON_SUFFIX);
