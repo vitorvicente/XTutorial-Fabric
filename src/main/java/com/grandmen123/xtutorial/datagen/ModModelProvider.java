@@ -7,6 +7,7 @@ import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.block.custom.CauliflowerCropBlock;
 import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.item.ModItems;
+import com.grandmen123.xtutorial.util.ModAdvancedModelUtils;
 import com.grandmen123.xtutorial.util.ModModelPredicateProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -17,7 +18,9 @@ import net.minecraft.item.Item;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -86,6 +89,8 @@ public class ModModelProvider extends FabricModelProvider {
         registerOnOffItem(itemModelGenerator, ModItems.DATA_TABLET);
 
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
+
+        registerBowItem(itemModelGenerator, ModItems.PINK_GARNET_BOW);
     }
 
     @SuppressWarnings("SameParameterValue")
@@ -125,5 +130,41 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.writer.accept(defaultItem, () -> jsonObject);
         Models.GENERATED.upload(itemOn, TextureMap.layer0(defaultItem), itemModelGenerator.writer);
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private void registerBowItem(ItemModelGenerator itemModelGenerator, Item item) {
+        Identifier baseId = ModelIds.getItemModelId(item);
+        Model bowModel = new Model(Optional.of(baseId), Optional.empty(), TextureKey.LAYER0);
+        List<Identifier> stateIds = List.of(ModelIds.getItemSubModelId(item, "_pulling_0"),
+                                            ModelIds.getItemSubModelId(item, "_pulling_1"),
+                                            ModelIds.getItemSubModelId(item, "_pulling_2"));
+
+        JsonObject jsonObject = Models.GENERATED.createJson(baseId, Map.of(TextureKey.LAYER0, baseId));
+        JsonObject display = ModAdvancedModelUtils.genBowDisplayObject();
+
+        JsonArray overrides = new JsonArray();
+        int counter = 0;
+        for (Identifier id : stateIds) {
+            JsonObject predicateWrapper = new JsonObject();
+            JsonObject predicateInner = new JsonObject();
+            double pull = (counter == 1) ? 0.65 : 0.9;
+
+            predicateInner.addProperty("pulling", 1);
+            if (counter != 0)
+                predicateInner.addProperty("pull", pull);
+
+            predicateWrapper.addProperty("model", id.toString());
+            predicateWrapper.add("predicate", predicateInner);
+            overrides.add(predicateWrapper);
+            counter++;
+
+            bowModel.upload(id, TextureMap.layer0(id), itemModelGenerator.writer);
+        }
+
+        jsonObject.add("display", display);
+        jsonObject.add("overrides", overrides);
+
+        itemModelGenerator.writer.accept(baseId, () -> jsonObject);
     }
 }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "xtutorial:pink_garnet"
+    },
+    "i": {
+      "item": "minecraft:stick"
+    },
+    "l": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " il",
+    "# l",
+    " il"
+  ],
+  "result": {
+    "item": "xtutorial:pink_garnet_bow"
+  },
+  "show_notification": true
+}

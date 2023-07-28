@@ -105,6 +105,15 @@ public class ModRecipeGen extends FabricRecipeProvider {
                                .pattern(" i")
                                .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
                                .offerTo(exporter);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PINK_GARNET_BOW)
+                               .input('#', ModItems.PINK_GARNET)
+                               .input('i', Items.STICK)
+                               .input('l', Items.STRING)
+                               .pattern(" il")
+                               .pattern("# l")
+                               .pattern(" il")
+                               .criterion("has_pink_garnet", conditionsFromItem(ModItems.PINK_GARNET))
+                               .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.PINK_GARNET_PAXEL)
                                .input('p', ModItems.PINK_GARNET_PICKAXE)
                                .input('a', ModItems.PINK_GARNET_AXE)

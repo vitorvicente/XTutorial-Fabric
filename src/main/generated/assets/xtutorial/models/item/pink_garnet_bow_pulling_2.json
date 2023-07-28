@@ -1,0 +1,6 @@
+{
+  "parent": "xtutorial:item/pink_garnet_bow",
+  "textures": {
+    "layer0": "xtutorial:item/pink_garnet_bow_pulling_2"
+  }
+}
