@@ -4,5 +4,35 @@
     "sounds": [
       "xtutorial:metal_detector_found_ore"
     ]
+  },
+  "pink_garnet_lamp_break": {
+    "subtitle": "sounds.xtutorial.pink_garnet_lamp_break",
+    "sounds": [
+      "xtutorial:pink_garnet_lamp_break"
+    ]
+  },
+  "pink_garnet_lamp_step": {
+    "subtitle": "sounds.xtutorial.pink_garnet_lamp_step",
+    "sounds": [
+      "xtutorial:pink_garnet_lamp_step"
+    ]
+  },
+  "pink_garnet_lamp_place": {
+    "subtitle": "sounds.xtutorial.pink_garnet_lamp_place",
+    "sounds": [
+      "xtutorial:pink_garnet_lamp_place"
+    ]
+  },
+  "pink_garnet_lamp_hit": {
+    "subtitle": "sounds.xtutorial.pink_garnet_lamp_hit",
+    "sounds": [
+      "xtutorial:pink_garnet_lamp_hit"
+    ]
+  },
+  "pink_garnet_lamp_fall": {
+    "subtitle": "sounds.xtutorial.pink_garnet_lamp_fall",
+    "sounds": [
+      "xtutorial:pink_garnet_lamp_fall"
+    ]
   }
 }

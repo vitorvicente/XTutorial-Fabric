@@ -77,6 +77,12 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
 
         translationBuilder.add("sound.xtutorial.metal_detector_found_ore", "Metal Detector Found Ore!");
 
+        translationBuilder.add("sound.xtutorial.pink_garnet_lamp_break", "Broke a Pink Garnet Lamp Block!");
+        translationBuilder.add("sound.xtutorial.pink_garnet_lamp_step", "Stepped on a Pink Garnet Lamp Block!");
+        translationBuilder.add("sound.xtutorial.pink_garnet_lamp_place", "Placed a Pink Garnet Lamp Block!");
+        translationBuilder.add("sound.xtutorial.pink_garnet_lamp_hit", "Hit a Pink Garnet Lamp Block!");
+        translationBuilder.add("sound.xtutorial.pink_garnet_lamp_fall", "Fell on a Pink Garnet Lamp Block!");
+
         translationBuilder.add("command.xtutorial.home.set.failure",
                                "Unable to Set Home Here!");
         translationBuilder.add("command.xtutorial.home.set.success",

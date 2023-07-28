@@ -4,6 +4,7 @@ import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.custom.CauliflowerCropBlock;
 import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.block.custom.SoundBlock;
+import com.grandmen123.xtutorial.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -76,7 +77,8 @@ public class ModBlocks {
             "pink_garnet_lamp_block",
             new PinkGarnetLampBlock(
                     FabricBlockSettings.copyOf(Blocks.REDSTONE_LAMP)
-                                       .luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)));
+                                       .luminance(state -> state.get(PinkGarnetLampBlock.CLICKED) ? 15 : 0)
+                                       .sounds(ModSounds.PINK_GARNET_LAMP_SOUNDS)));
 
     public static final Block CAULIFLOWER_CROP = registerBlockWithoutBlockItem(
             "cauliflower_crop", new CauliflowerCropBlock(FabricBlockSettings
