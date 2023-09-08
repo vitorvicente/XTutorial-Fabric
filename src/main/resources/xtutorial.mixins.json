@@ -3,7 +3,8 @@
 	"package": "com.grandmen123.xtutorial.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ModEntityDataSaverMixin"
+		"ModEntityDataSaverMixin",
+		"PlayerEntityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
