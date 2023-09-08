@@ -94,6 +94,9 @@ public class ModItems {
     public static final Item PINK_GARNET_BOW =
             registerItem("pink_garnet_bow", new BowItem(new FabricItemSettings().maxDamage(500)));
 
+    public static final Item PINK_GARNET_SHIELD =
+            registerItem("pink_garnet_shield", new ShieldItem(new FabricItemSettings().maxDamage(500)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -122,6 +125,7 @@ public class ModItems {
         XTutorial.addToItemGroup(PINK_GARNET_HOE);
         XTutorial.addToItemGroup(PINK_GARNET_PAXEL);
         XTutorial.addToItemGroup(PINK_GARNET_BOW);
+        XTutorial.addToItemGroup(PINK_GARNET_SHIELD);
 
         XTutorial.addToItemGroup(PINK_GARNET_HELMET);
         XTutorial.addToItemGroup(PINK_GARNET_CHESTPLATE);

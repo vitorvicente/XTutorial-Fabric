@@ -77,7 +77,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PINK_GARNET_AXE)
                 .add(ModItems.PINK_GARNET_SHOVEL)
                 .add(ModItems.PINK_GARNET_HOE)
-                .add(ModItems.PINK_GARNET_PAXEL);
+                .add(ModItems.PINK_GARNET_PAXEL)
+                .add(ModItems.PINK_GARNET_BOW)
+                .add(ModItems.PINK_GARNET_SHIELD);
 
         getOrCreateTagBuilder(ModTags.Items.ADVANCED_TOOLS)
                 .add(ModItems.DATA_TABLET)
