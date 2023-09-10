@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_pink_garnet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "xtutorial:pink_garnet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "xtutorial:textures/block/pink_garnet_ore.png",
+    "description": {
+      "translate": "advancement.xtutorial.pink_garnet.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "xtutorial:pink_garnet"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.xtutorial.pink_garnet.name"
+    }
+  },
+  "requirements": [
+    [
+      "has_pink_garnet"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

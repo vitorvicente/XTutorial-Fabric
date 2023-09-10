@@ -1,4 +1,8 @@
 {
+  "advancement.xtutorial.metal_detector.desc": "Batteries not included!",
+  "advancement.xtutorial.metal_detector.name": "Metal Detector",
+  "advancement.xtutorial.pink_garnet.desc": "The Power is in the Pink",
+  "advancement.xtutorial.pink_garnet.name": "XTutorial",
   "block.xtutorial.deepslate_pink_garnet_ore": "DeepSlate Pink Garnet Ore",
   "block.xtutorial.end_stone_pink_garnet_ore": "End Stone Pink Garnet Ore",
   "block.xtutorial.gem_empowering_station": "Gem Empowering Station",

@@ -1,0 +1,39 @@
+{
+  "parent": "xtutorial:xtutorial",
+  "criteria": {
+    "has_metal_detector": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "xtutorial:metal_detector"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "xtutorial:textures/block/pink_garnet_ore.png",
+    "description": {
+      "translate": "advancement.xtutorial.metal_detector.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "xtutorial:pink_garnet"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.xtutorial.metal_detector.name"
+    }
+  },
+  "requirements": [
+    [
+      "has_metal_detector"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

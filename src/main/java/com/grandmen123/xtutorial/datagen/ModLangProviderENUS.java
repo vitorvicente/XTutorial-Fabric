@@ -124,5 +124,11 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add("item.minecraft.potion.effect.slimey_potion", "Slimey Potion");
         translationBuilder.add("item.minecraft.splash_potion.effect.slimey_potion", "Slimey Splash Potion");
         translationBuilder.add("item.minecraft.lingering_potion.effect.slimey_potion", "Slimey Lingering Potion");
+
+        translationBuilder.add("advancement.xtutorial.pink_garnet.name", "XTutorial");
+        translationBuilder.add("advancement.xtutorial.metal_detector.name", "Metal Detector");
+        translationBuilder.add("advancement.xtutorial.pink_garnet.desc", "The Power is in the Pink");
+        translationBuilder.add("advancement.xtutorial.metal_detector.desc", "Batteries not included!");
+
     }
 }
