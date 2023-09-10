@@ -92,6 +92,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BAR_BRAWL_MUSIC_DISC, Models.GENERATED);
 
         registerBowItem(itemModelGenerator, ModItems.PINK_GARNET_BOW);
+
+        itemModelGenerator.register(ModItems.RADIATION_STAFF, Models.GENERATED);
     }
 
     @SuppressWarnings("SameParameterValue")

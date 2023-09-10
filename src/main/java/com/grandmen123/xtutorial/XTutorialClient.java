@@ -7,10 +7,12 @@ import com.grandmen123.xtutorial.particle.custom.PinkGarnetParticle;
 import com.grandmen123.xtutorial.util.ModModelPredicateProvider;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.util.ModelIdentifier;
 
 import static com.grandmen123.xtutorial.XTutorial.LOGGER;
 
@@ -34,6 +36,9 @@ public class XTutorialClient implements ClientModInitializer {
 
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_SOAP_WATER, ModFluids.FLOWING_SOAP_WATER,
                                                      SimpleFluidRenderHandler.coloredWater(0xA1E038D0));
+
+        ModelLoadingRegistry.INSTANCE.registerModelProvider(((manager, out) -> new ModelIdentifier(XTutorial.MOD_ID,
+         "radiation_staff_3d", "inventory")));
 
         LOGGER.info("Finished Initializing Client");
     }

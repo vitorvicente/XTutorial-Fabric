@@ -1,13 +1,18 @@
 {
-	"required": true,
-	"package": "com.grandmen123.xtutorial.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"BrewingRecipeRegistryMixin",
-		"ModEntityDataSaverMixin",
-		"PlayerEntityMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "com.grandmen123.xtutorial.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BrewingRecipeRegistryMixin",
+    "ModEntityDataSaverMixin",
+    "PlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "ItemRendererAccessor",
+    "ItemRendererMixin",
+    "ModelLoaderMixin"
+  ]
 }
