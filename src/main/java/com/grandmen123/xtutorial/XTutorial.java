@@ -6,6 +6,7 @@ import com.grandmen123.xtutorial.enchant.ModEnchants;
 import com.grandmen123.xtutorial.event.ModEvents;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.sound.ModSounds;
+import com.grandmen123.xtutorial.util.ModLootTableModifiers;
 import com.grandmen123.xtutorial.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 
@@ -41,6 +42,7 @@ public class XTutorial implements ModInitializer {
         ModCommands.registerCommands();
         ModEvents.registerEvents();
         ModSounds.registerSounds();
+        ModLootTableModifiers.modifyLootTables();
 
         LOGGER.info("Finished Initializing Mod");
     }
