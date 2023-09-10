@@ -3,15 +3,21 @@ package com.grandmen123.xtutorial.util;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.mixin.BrewingRecipeRegistryMixin;
 import com.grandmen123.xtutorial.potion.ModPotions;
+import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.ComposterBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Potions;
+import net.minecraft.village.TradeOffer;
+import net.minecraft.village.VillagerProfession;
 
 public class ModRegistries {
     public static void registerModStuffs() {
         registerFuels();
         registerModCompostables();
         registerPotionRecipes();
+        registerCustomTrades();
     }
 
     private static void registerFuels() {
@@ -28,5 +34,21 @@ public class ModRegistries {
     private static void registerPotionRecipes() {
         BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.PINK_GARNET,
                                                               ModPotions.SLIMEY_POTION);
+    }
+
+    private static void registerCustomTrades() {
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1,
+                                                factories -> factories.add(((entity, random) -> new TradeOffer(
+                                                        new ItemStack(Items.EMERALD, 2),
+                                                        new ItemStack(ModItems.CAULIFLOWER, 2),
+                                                        6, 2, 0.02f
+                                                ))));
+
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3,
+                                                factories -> factories.add(((entity, random) -> new TradeOffer(
+                                                        new ItemStack(Items.EMERALD, 32),
+                                                        new ItemStack(ModItems.PINK_GARNET_PAXEL, 1),
+                                                        2, 8, 0.08f
+                                                ))));
     }
 }
