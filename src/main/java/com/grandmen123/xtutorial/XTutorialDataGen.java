@@ -20,6 +20,7 @@ public class XTutorialDataGen implements DataGeneratorEntrypoint {
 		pack.addProvider(ModLangProviderENUS::new);
 		pack.addProvider(ModPaintingTagProvider::new);
 		pack.addProvider(ModAdvancementProvider::new);
+		pack.addProvider(ModPOITagProvider::new);
 
 		LOGGER.info("Finished DataGen");
 	}

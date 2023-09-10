@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "xtutorial:soundpoi",
+      "required": false
+    }
+  ]
+}

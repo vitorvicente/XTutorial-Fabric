@@ -130,5 +130,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add("advancement.xtutorial.pink_garnet.desc", "The Power is in the Pink");
         translationBuilder.add("advancement.xtutorial.metal_detector.desc", "Batteries not included!");
 
+        translationBuilder.add("entity.minecraft.villager.soundmaster", "Soundmaster");
+
     }
 }

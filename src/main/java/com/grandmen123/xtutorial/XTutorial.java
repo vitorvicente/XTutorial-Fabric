@@ -12,6 +12,7 @@ import com.grandmen123.xtutorial.potion.ModPotions;
 import com.grandmen123.xtutorial.sound.ModSounds;
 import com.grandmen123.xtutorial.util.ModLootTableModifiers;
 import com.grandmen123.xtutorial.util.ModRegistries;
+import com.grandmen123.xtutorial.villager.ModVillagers;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -50,6 +51,7 @@ public class XTutorial implements ModInitializer {
         ModEvents.registerEvents();
         ModSounds.registerSounds();
         ModParticles.registerParticles();
+        ModVillagers.registerVillagers();
 
         ModLootTableModifiers.modifyLootTables();
 

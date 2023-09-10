@@ -3,6 +3,7 @@ package com.grandmen123.xtutorial.util;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.mixin.BrewingRecipeRegistryMixin;
 import com.grandmen123.xtutorial.potion.ModPotions;
+import com.grandmen123.xtutorial.villager.ModVillagers;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.ComposterBlock;
@@ -48,6 +49,25 @@ public class ModRegistries {
                                                 factories -> factories.add(((entity, random) -> new TradeOffer(
                                                         new ItemStack(Items.EMERALD, 32),
                                                         new ItemStack(ModItems.PINK_GARNET_PAXEL, 1),
+                                                        2, 8, 0.08f
+                                                ))));
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 1,
+                                                factories -> factories.add(((entity, random) -> new TradeOffer(
+                                                        new ItemStack(Items.EMERALD, 32),
+                                                        new ItemStack(ModItems.BAR_BRAWL_MUSIC_DISC, 1),
+                                                        2, 8, 0.08f
+                                                ))));
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 2,
+                                                factories -> factories.add(((entity, random) -> new TradeOffer(
+                                                        new ItemStack(Items.EMERALD, 32),
+                                                        new ItemStack(Items.MUSIC_DISC_13, 1),
+                                                        2, 8, 0.08f
+                                                ))));
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.SOUND_MASTER, 3,
+                                                factories -> factories.add(((entity, random) -> new TradeOffer(
+                                                        new ItemStack(Items.EMERALD, 32),
+                                                        new ItemStack(Items.MUSIC_DISC_CAT, 1),
                                                         2, 8, 0.08f
                                                 ))));
     }
