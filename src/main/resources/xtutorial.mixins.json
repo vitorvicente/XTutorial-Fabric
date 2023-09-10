@@ -3,6 +3,7 @@
 	"package": "com.grandmen123.xtutorial.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"BrewingRecipeRegistryMixin",
 		"ModEntityDataSaverMixin",
 		"PlayerEntityMixin"
 	],

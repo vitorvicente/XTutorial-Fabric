@@ -121,5 +121,8 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add("painting.xtutorial.world.author", "NanoAttack");
 
         translationBuilder.add(ModEffects.SLIMEY, "Slimey");
+        translationBuilder.add("item.minecraft.potion.effect.slimey_potion", "Slimey Potion");
+        translationBuilder.add("item.minecraft.splash_potion.effect.slimey_potion", "Slimey Splash Potion");
+        translationBuilder.add("item.minecraft.lingering_potion.effect.slimey_potion", "Slimey Lingering Potion");
     }
 }
