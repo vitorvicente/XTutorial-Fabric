@@ -26,6 +26,7 @@
   "command.xtutorial.home.set.failure": "Unable to Set Home Here!",
   "command.xtutorial.home.set.success": "Set Home at: ",
   "command.xtutorial.home.success": "Teleported to Home at: ",
+  "effect.xtutorial.slimey": "Slimey",
   "enchantment.xtutorial.lightning_striker": "Lighting Striker",
   "item.xtutorial.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.xtutorial.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",

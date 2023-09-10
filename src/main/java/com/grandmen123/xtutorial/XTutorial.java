@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
 import com.grandmen123.xtutorial.cmd.ModCommands;
+import com.grandmen123.xtutorial.effect.ModEffects;
 import com.grandmen123.xtutorial.enchant.ModEnchants;
 import com.grandmen123.xtutorial.event.ModEvents;
 import com.grandmen123.xtutorial.item.ModItems;
@@ -41,6 +42,7 @@ public class XTutorial implements ModInitializer {
         ModRegistries.registerModStuffs();
 
         ModEnchants.registerModEnchantments();
+        ModEffects.registerEffects();
         ModCommands.registerCommands();
         ModEvents.registerEvents();
         ModSounds.registerSounds();

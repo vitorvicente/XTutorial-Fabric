@@ -1,6 +1,7 @@
 package com.grandmen123.xtutorial.datagen;
 
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.effect.ModEffects;
 import com.grandmen123.xtutorial.enchant.ModEnchants;
 import com.grandmen123.xtutorial.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -118,5 +119,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
         translationBuilder.add("painting.xtutorial.saw_them.author", "NanoAttack");
         translationBuilder.add("painting.xtutorial.shrimp.author", "NanoAttack");
         translationBuilder.add("painting.xtutorial.world.author", "NanoAttack");
+
+        translationBuilder.add(ModEffects.SLIMEY, "Slimey");
     }
 }

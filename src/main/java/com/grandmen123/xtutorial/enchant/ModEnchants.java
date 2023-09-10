@@ -17,6 +17,7 @@ public class ModEnchants {
                                                                                             EnchantmentTarget.WEAPON,
                                                                                             EquipmentSlot.MAINHAND));
 
+    @SuppressWarnings("SameParameterValue")
     private static Enchantment register(String name, Enchantment enchantment) {
         Registry.register(Registries.ENCHANTMENT, new Identifier(XTutorial.MOD_ID, name), enchantment);
         return enchantment;
