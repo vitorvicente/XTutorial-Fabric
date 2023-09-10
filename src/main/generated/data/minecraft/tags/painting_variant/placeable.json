@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "xtutorial:saw_them",
+      "required": false
+    },
+    {
+      "id": "xtutorial:shrimp",
+      "required": false
+    },
+    {
+      "id": "xtutorial:world",
+      "required": false
+    }
+  ]
+}

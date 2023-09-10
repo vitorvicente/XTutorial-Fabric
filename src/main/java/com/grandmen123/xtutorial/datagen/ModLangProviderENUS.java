@@ -111,5 +111,12 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.GEM_EMPOWERING_STATION, "Gem Empowering Station");
         translationBuilder.add(ModItems.RADIATION_STAFF, "Radiation Staff");
+
+        translationBuilder.add("painting.xtutorial.saw_them.title", "Saw Them");
+        translationBuilder.add("painting.xtutorial.shrimp.title", "Shrimp");
+        translationBuilder.add("painting.xtutorial.world.title", "World");
+        translationBuilder.add("painting.xtutorial.saw_them.author", "NanoAttack");
+        translationBuilder.add("painting.xtutorial.shrimp.author", "NanoAttack");
+        translationBuilder.add("painting.xtutorial.world.author", "NanoAttack");
     }
 }

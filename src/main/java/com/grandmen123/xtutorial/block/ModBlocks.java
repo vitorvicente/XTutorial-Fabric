@@ -114,6 +114,7 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         LOGGER.info("Registering Mod Blocks");
+
         addBlocksToItemGroup();
     }
 
