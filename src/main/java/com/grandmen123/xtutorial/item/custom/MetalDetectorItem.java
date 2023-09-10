@@ -13,6 +13,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.particle.BlockStateParticleEffect;
+import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -29,6 +32,16 @@ public class MetalDetectorItem extends Item {
     }
 
     @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("item.xtutorial.metal_detector.tooltip.shift"));
+        } else {
+            tooltip.add(Text.translatable("item.xtutorial.metal_detector.tooltip"));
+        }
+        super.appendTooltip(stack, world, tooltip, context);
+    }
+
+    @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         if (context.getPlayer() == null)
             return ActionResult.PASS;
@@ -39,12 +52,10 @@ public class MetalDetectorItem extends Item {
             boolean foundBlock = false;
 
             for (int i = 0; i <= blockPos.getY() + 64; i++) {
-                BlockState blockState = context.getWorld().getBlockState(blockPos.down(i));
-                Block block = blockState.getBlock();
-
-                if (blockState.isIn(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS)) {
+                if (context.getWorld().getBlockState(blockPos.down(i))
+                           .isIn(ModTags.Blocks.METAL_DETECTOR_DETECTABLE_BLOCKS)) {
                     foundBlock = true;
-                    handleFoundData(player, blockPos.down(i), block);
+                    handleFoundData(context, player, i);
                     break;
                 }
             }
@@ -57,11 +68,15 @@ public class MetalDetectorItem extends Item {
                                   playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
 
 
-
         return super.useOnBlock(context);
     }
 
-    private void handleFoundData(PlayerEntity player, BlockPos down, Block block) {
+    private void handleFoundData(ItemUsageContext context,
+                                 PlayerEntity player,
+                                 int depth) {
+
+        BlockPos down = context.getBlockPos().down(depth);
+        Block block = context.getWorld().getBlockState(down).getBlock();
         Text message = Text.translatable("item.xtutorial.metal_detector.found_valuables")
                            .append(Text.literal(" " + block.getName().getString() + " @ "
                                                 + down.getX() + ", "
@@ -77,16 +92,16 @@ public class MetalDetectorItem extends Item {
 
         player.playSound(ModSounds.METAL_DETECTOR_FOUND_ORE, SoundCategory.BLOCKS, 1.0f, 1.0f);
 
+        spawnFoundParticles(((ServerWorld) context.getWorld()), context.getBlockPos(),
+                            context.getWorld().getBlockState(down));
+
         player.sendMessage(message);
     }
 
-    @Override
-    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if (Screen.hasShiftDown()) {
-            tooltip.add(Text.translatable("item.xtutorial.metal_detector.tooltip.shift"));
-        } else {
-            tooltip.add(Text.translatable("item.xtutorial.metal_detector.tooltip"));
-        }
-        super.appendTooltip(stack, world, tooltip, context);
+    private void spawnFoundParticles(ServerWorld world, BlockPos blockPos, BlockState blockState) {
+        for (int i = 0; i < 20; i++)
+            world.spawnParticles(new BlockStateParticleEffect(ParticleTypes.BLOCK, blockState),
+                                 blockPos.getX() + 0.5d, blockPos.getY() + 1, blockPos.getZ() + 0.5, 2,
+                                 Math.cos(i * 10) * 0.25d, 0.15d, Math.sin(i * 18) * 0.25d, 5f);
     }
 }
