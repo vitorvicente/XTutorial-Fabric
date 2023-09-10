@@ -2,6 +2,7 @@ package com.grandmen123.xtutorial.item;
 
 import com.grandmen123.xtutorial.XTutorial;
 import com.grandmen123.xtutorial.block.ModBlocks;
+import com.grandmen123.xtutorial.fluid.ModFluids;
 import com.grandmen123.xtutorial.item.custom.*;
 import com.grandmen123.xtutorial.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -97,6 +98,12 @@ public class ModItems {
     public static final Item PINK_GARNET_SHIELD =
             registerItem("pink_garnet_shield", new ShieldItem(new FabricItemSettings().maxDamage(500)));
 
+    public static final Item SOAP_WATER_BUCKET = registerItem("soap_water_bucket",
+                                                              new BucketItem(ModFluids.STILL_SOAP_WATER,
+                                                                             new FabricItemSettings()
+                                                                                     .recipeRemainder(Items.BUCKET)
+                                                                                     .maxCount(1)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
     }
@@ -139,5 +146,7 @@ public class ModItems {
         XTutorial.addToItemGroup(BAR_BRAWL_MUSIC_DISC);
 
         XTutorial.addToItemGroup(RADIATION_STAFF);
+
+        XTutorial.addToItemGroup(SOAP_WATER_BUCKET);
     }
 }

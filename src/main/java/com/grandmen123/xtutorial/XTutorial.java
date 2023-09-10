@@ -5,6 +5,7 @@ import com.grandmen123.xtutorial.cmd.ModCommands;
 import com.grandmen123.xtutorial.effect.ModEffects;
 import com.grandmen123.xtutorial.enchant.ModEnchants;
 import com.grandmen123.xtutorial.event.ModEvents;
+import com.grandmen123.xtutorial.fluid.ModFluids;
 import com.grandmen123.xtutorial.item.ModItems;
 import com.grandmen123.xtutorial.painting.ModPaintings;
 import com.grandmen123.xtutorial.particle.ModParticles;
@@ -52,6 +53,7 @@ public class XTutorial implements ModInitializer {
         ModSounds.registerSounds();
         ModParticles.registerParticles();
         ModVillagers.registerVillagers();
+        ModFluids.registerFluids();
 
         ModLootTableModifiers.modifyLootTables();
 

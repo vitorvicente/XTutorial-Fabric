@@ -132,5 +132,7 @@ public class ModLangProviderENUS extends FabricLanguageProvider {
 
         translationBuilder.add("entity.minecraft.villager.soundmaster", "Soundmaster");
 
+        translationBuilder.add(ModItems.SOAP_WATER_BUCKET, "Soap Water Bucket");
+
     }
 }

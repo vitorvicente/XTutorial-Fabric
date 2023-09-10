@@ -5,6 +5,7 @@ import com.grandmen123.xtutorial.block.custom.CauliflowerCropBlock;
 import com.grandmen123.xtutorial.block.custom.GemEmpoweringStationBlock;
 import com.grandmen123.xtutorial.block.custom.PinkGarnetLampBlock;
 import com.grandmen123.xtutorial.block.custom.SoundBlock;
+import com.grandmen123.xtutorial.fluid.ModFluids;
 import com.grandmen123.xtutorial.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -95,6 +96,10 @@ public class ModBlocks {
     public static final Block GEM_EMPOWERING_STATION = registerBlock(
             "gem_empowering_station", new GemEmpoweringStationBlock(FabricBlockSettings
                                                                             .copyOf(Blocks.IRON_BLOCK).nonOpaque()));
+
+    public static final Block SOAP_WATER_BLOCK = registerBlockWithoutBlockItem(
+            "soap_water_block", new FluidBlock(ModFluids.STILL_SOAP_WATER, FabricBlockSettings.copyOf(Blocks.WATER)
+                    .liquid().replaceable()));
 
 
     private static Block registerBlock(String name, Block block) {
